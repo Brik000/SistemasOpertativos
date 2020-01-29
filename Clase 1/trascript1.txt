@@ -1,0 +1,657 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200129095232
+Nombre de usuario: DESKTOP-IA9DV28\Usuario
+Usuario RunAs: DESKTOP-IA9DV28\Usuario
+Nombre de la configuración: 
+Máquina: DESKTOP-IA9DV28 (Microsoft Windows NT 10.0.17763.0)
+Aplicación host: C:\Windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 6124
+PSVersion: 5.1.17763.1
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1
+BuildVersion: 10.0.17763.1
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\Usuario\Documents\PowerShell_transcript.DESKTOP-IA9DV28.b_5AcWYD.20200129095232.txt
+PS C:\Users\Usuario> help "html"
+
+NOMBRE
+    ConvertTo-Html
+
+SINOPSIS
+    Converts Microsoft .NET Framework objects into HTML that can be displayed in a Web browser.
+
+
+SINTAXIS
+    ConvertTo-Html [[-Property] <Object[]>] [[-Head] <String[]>] [[-Title] <String>] [[-Body] <String[]>] [-As {Table |
+    List}] [-CssUri <Uri>] [-InputObject <PSObject>] [-PostContent <String[]>] [-PreContent <String[]>] [<CommonParameters>]
+
+    ConvertTo-Html [[-Property] <Object[]>] [-As {Table | List}] [-Fragment] [-InputObject <PSObject>] [-PostContent
+    <String[]>] [-PreContent <String[]>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The ConvertTo-Html cmdlet converts .NET Framework objects into HTML that can be displayed in a Web browser. You can use
+    this cmdlet to display the output of a command in a Web page.
+
+    You can use the parameters of ConvertTo-Html to select object properties, to specify a table or list format, to specify
+    the HTML page title, to add text before and after the object, and to return only the table or list fragment, instead of
+    a strict DTD page.
+
+    When you submit multiple objects to ConvertTo-Html , Windows PowerShell creates the table (or list) based on the
+    properties of the first object that you submit. If the remaining objects do not have one of the specified properties,
+    the property value of that object is an empty cell. If the remaining objects have additional properties, those property
+    values are not included in the file.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821758
+    ConvertTo-Csv
+    ConvertTo-Json
+    ConvertTo-Xml
+    Export-Clixml
+    Import-Clixml
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help ConvertTo-Html -examples".
+    Para obtener más información, escriba: "get-help ConvertTo-Html -detailed".
+    Para obtener información técnica, escriba: "get-help ConvertTo-Html -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help ConvertTo-Html -online"
+
+
+PS C:\Users\Usuario> ConvertTo-Html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>HTML TABLE</title>
+</head><body>
+<table>
+</table>
+</body></html>
+PS C:\Users\Usuario> Out-Printer -Name "Santiago del Campo"
+PS C:\Users\Usuario> help "printer"
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Add-Printer                       Function  PrintManagement           Adds a printer to the specified computer.
+Add-PrinterDriver                 Function  PrintManagement           Installs a printer driver on the specified computer.
+Add-PrinterPort                   Function  PrintManagement           Installs a printer port on the specified computer.
+Get-Printer                       Function  PrintManagement           Retrieves a list of printers installed on a computer.
+Get-PrinterDriver                 Function  PrintManagement           Retrieves the list of printer drivers installed on ...
+Get-PrinterPort                   Function  PrintManagement           Retrieves a list of printer ports installed on the ...
+Get-PrinterProperty               Function  PrintManagement           Retrieves printer properties for the specified prin...
+Read-PrinterNfcTag                Function  PrintManagement           Reads information about printers from an NFC tag.
+Remove-Printer                    Function  PrintManagement           Removes a printer from the specified computer.
+Remove-PrinterDriver              Function  PrintManagement           Deletes printer driver from the specified computer.
+Remove-PrinterPort                Function  PrintManagement           Removes the specified printer port from the specifi...
+Rename-Printer                    Function  PrintManagement           Renames the specified printer.
+Set-Printer                       Function  PrintManagement           Updates the configuration of an existing printer.
+Set-PrinterProperty               Function  PrintManagement           Modifies the printer properties for the specified p...
+Write-PrinterNfcTag               Function  PrintManagement           Writes printer connection data to an NFC tag.
+Out-Printer                       Cmdlet    Microsoft.PowerShell.U... Sends output to a printer.
+
+
+PS C:\Users\Usuario> Out-Printer -Name "Santiago del Campo"
+PS C:\Users\Usuario> help "file"
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Get-FileHash                      Function  Microsoft.PowerShell.U... Computes the hash value for a file by using a speci...
+Import-PowerShellDataFile         Function  Microsoft.PowerShell.U...
+New-TemporaryFile                 Function  Microsoft.PowerShell.U... Creates a temporary file.
+New-PSRoleCapabilityFile          Cmdlet    Microsoft.PowerShell.Core Creates a file that defines a set of capabilities t...
+New-PSSessionConfigurationFile    Cmdlet    Microsoft.PowerShell.Core Creates a file that defines a session configuration.
+Test-PSSessionConfigurationFile   Cmdlet    Microsoft.PowerShell.Core Verifies the keys and values in a session configura...
+Out-File                          Cmdlet    Microsoft.PowerShell.U... Sends output to a file.
+Unblock-File                      Cmdlet    Microsoft.PowerShell.U... Unblocks files that were downloaded from the Internet.
+New-ScriptFileInfo                Function  PowerShellGet             ...
+Test-ScriptFileInfo               Function  PowerShellGet             ...
+Update-ScriptFileInfo             Function  PowerShellGet             ...
+Get-AppLockerFileInformation      Cmdlet    AppLocker                 Get-AppLockerFileInformation...
+Add-BitsFile                      Cmdlet    BitsTransfer              Add-BitsFile...
+Publish-BCFileContent             Function  BranchCache               ...
+Set-AppXProvisionedDataFile       Cmdlet    Dism                      Set-AppXProvisionedDataFile...
+Test-FileCatalog                  Cmdlet    Microsoft.PowerShell.S... Test-FileCatalog...
+New-FileCatalog                   Cmdlet    Microsoft.PowerShell.S... New-FileCatalog...
+Get-NetConnectionProfile          Function  NetConnection             ...
+Set-NetConnectionProfile          Function  NetConnection             ...
+Get-NetFirewallProfile            Function  NetSecurity               ...
+Set-NetFirewallProfile            Function  NetSecurity               ...
+Disable-NetIPHttpsProfile         Function  NetworkTransition         ...
+Enable-NetIPHttpsProfile          Function  NetworkTransition         ...
+Get-SmbOpenFile                   Function  SmbShare                  ...
+Close-SmbOpenFile                 Function  SmbShare                  ...
+Remove-StorageFileServer          Function  Storage                   ...
+Get-SupportedFileSystems          Function  Storage                   ...
+Get-FileIntegrity                 Function  Storage                   ...
+Get-FileShareAccessControlEntry   Function  Storage                   ...
+Get-FileShare                     Function  Storage                   ...
+Clear-FileStorageTier             Function  Storage                   ...
+Remove-FileShare                  Function  Storage                   ...
+Block-FileShareAccess             Function  Storage                   ...
+Get-FileStorageTier               Function  Storage                   ...
+Revoke-FileShareAccess            Function  Storage                   ...
+Get-StorageFileServer             Function  Storage                   ...
+New-StorageFileServer             Function  Storage                   ...
+Set-FileStorageTier               Function  Storage                   ...
+Set-FileIntegrity                 Function  Storage                   ...
+New-FileShare                     Function  Storage                   ...
+Unblock-FileShareAccess           Function  Storage                   ...
+Set-StorageFileServer             Function  Storage                   ...
+Grant-FileShareAccess             Function  Storage                   ...
+Set-FileShare                     Function  Storage                   ...
+Repair-FileIntegrity              Function  Storage                   ...
+Debug-FileShare                   Function  Storage                   ...
+Set-StorageBusProfile             Function  StorageBusCache           ...
+Set-UevTemplateProfile            Cmdlet    UEV                       Set-UevTemplateProfile...
+FileSystem                        Provider  Microsoft.PowerShell.Core Provides access to files and directories.
+about_Profiles                    HelpFile                            Describes how to create and use a Windows PowerShel...
+about_Session_Configuration_Files HelpFile                            Describes session configuration files, which can be...
+
+
+PS C:\Users\Usuario> help "procces"
+Get-Help : Get-Help no pudo encontrar procces en un archivo de Ayuda en esta sesión. Para descargar los temas de Ayuda 
+actualizados, escribe: "Update-Help". Para obtener Ayuda en pantalla, busca el tema de Ayuda en la biblioteca de 
+TechNet en https:/go.microsoft.com/fwlink/?LinkID=107116.
+En línea: 55 Carácter: 5
++     Get-Help @PSBoundParameters | more
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [Get-Help], HelpNotFoundException
+    + FullyQualifiedErrorId : HelpNotFound,Microsoft.PowerShell.Commands.GetHelpCommand
+Get-Help : Get-Help no pudo encontrar procces en un archivo de Ayuda en esta sesión. Para descargar los temas de Ayuda
+actualizados, escribe: "Update-Help". Para obtener Ayuda en pantalla, busca el tema de Ayuda en la biblioteca de TechNet en
+https:/go.microsoft.com/fwlink/?LinkID=107116.
+En línea: 55 Carácter: 5
++     Get-Help @PSBoundParameters | more
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [Get-Help], HelpNotFoundException
+    + FullyQualifiedErrorId : HelpNotFound,Microsoft.PowerShell.Commands.GetHelpCommand
+
+PS C:\Users\Usuario> help "process"
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Enter-PSHostProcess               Cmdlet    Microsoft.PowerShell.Core Connects to and enters into an interactive session ...
+Exit-PSHostProcess                Cmdlet    Microsoft.PowerShell.Core Closes an interactive session with a local process.
+Get-PSHostProcessInfo             Cmdlet    Microsoft.PowerShell.Core
+Debug-Process                     Cmdlet    Microsoft.PowerShell.M... Debugs one or more processes running on the local c...
+Get-Process                       Cmdlet    Microsoft.PowerShell.M... Gets the processes that are running on the local co...
+Start-Process                     Cmdlet    Microsoft.PowerShell.M... Starts one or more processes on the local computer.
+Stop-Process                      Cmdlet    Microsoft.PowerShell.M... Stops one or more running processes.
+Wait-Process                      Cmdlet    Microsoft.PowerShell.M... Waits for the processes to be stopped before accept...
+Get-AppvVirtualProcess            Function  AppvClient                ...
+Start-AppvVirtualProcess          Function  AppvClient                ...
+ConvertTo-ProcessMitigationPolicy Cmdlet    ProcessMitigations        ConvertTo-ProcessMitigationPolicy...
+Get-ProcessMitigation             Cmdlet    ProcessMitigations        Get-ProcessMitigation...
+Set-ProcessMitigation             Cmdlet    ProcessMitigations        Set-ProcessMitigation...
+
+
+PS C:\Users\Usuario> help New-EventLog
+
+NOMBRE
+    New-EventLog
+
+SINOPSIS
+    Creates a new event log and a new event source on a local or remote computer.
+
+
+SINTAXIS
+    New-EventLog [-LogName] <String> [-Source] <String[]> [[-ComputerName] <String[]>] [-CategoryResourceFile <String>]
+    [-MessageResourceFile <String>] [-ParameterResourceFile <String>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The New-EventLog cmdlet creates a new classic event log on a local or remote computer. It can also register an event
+    source that writes to the new log or to an existing log.
+
+    The cmdlets that contain the EventLog noun (the EventLog cmdlets) work only on classic event logs. To get events from
+    logs that use the Windows Event Log technology in Windows Vista and later versions of the Windows operating system, use
+    the Get-WinEvent cmdlet.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821603
+    Clear-EventLog
+    Get-EventLog
+    Limit-EventLog
+    New-EventLog
+    Remove-EventLog
+    Show-EventLog
+    Write-EventLog
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help New-EventLog -examples".
+    Para obtener más información, escriba: "get-help New-EventLog -detailed".
+    Para obtener información técnica, escriba: "get-help New-EventLog -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help New-EventLog -online"
+
+
+PS C:\Users\Usuario> help Write-EventLog
+
+NOMBRE
+    Write-EventLog
+
+SINOPSIS
+    Writes an event to an event log.
+
+
+SINTAXIS
+    Write-EventLog [-LogName] <String> [-Source] <String> [-EventId] <Int32> [[-EntryType] {Error | Information |
+    FailureAudit | SuccessAudit | Warning}] [-Message] <String> [-Category <Int16>] [-ComputerName <String>] [-RawData
+    <Byte[]>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Write-EventLog cmdlet writes an event to an event log.
+
+    To write an event to an event log, the event log must exist on the computer and the source must be registered for the
+    event log.
+
+    The cmdlets that contain the EventLog noun (the EventLog cmdlets) work only on classic event logs. To get events from
+    logs that use the Windows Event Log technology in Windows Vista and later versions of the Windows operating system, use
+    the Get-WinEvent cmdlet.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821651
+    Clear-EventLog
+    Get-EventLog
+    Limit-EventLog
+    New-EventLog
+    Remove-EventLog
+    Show-EventLog
+    Write-EventLog
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Write-EventLog -examples".
+    Para obtener más información, escriba: "get-help Write-EventLog -detailed".
+    Para obtener información técnica, escriba: "get-help Write-EventLog -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Write-EventLog -online"
+
+
+PS C:\Users\Usuario> help "alias"
+
+NOMBRE DEL PROVEEDOR
+    Alias
+
+UNIDADES
+    Alias:
+
+SINOPSIS
+    Provides access to the Windows PowerShell aliases and the values that they represent.
+
+DESCRIPCIÓN
+    The Windows PowerShell Alias provider lets you get, add, change, clear, and delete aliases in Windows PowerShell.
+
+    An alias is an alternate name for a cmdlet, function, or executable file. Windows PowerShell includes a set of built-in
+    aliases. And, you can add your own aliases to the current session and to your Windows PowerShell profile.
+
+    The Alias provider is a flat namespace that contains only the alias objects. The aliases have no child items.
+
+    Each alias is an instance of the System.Management.Automation.AliasInfo class.
+
+    The Alias provider exposes its data store in the Alias: drive. To work with aliases, you can change your location to
+    the Alias: drive by using the following command:
+
+        set-location alias:
+
+    Or, you can work from any other Windows PowerShell drive. To reference an alias from another location, use the Alias:
+    drive name in the path.
+
+    Windows PowerShell includes a set of cmdlets that are designed to view and to change aliases:
+
+        Export-Alias
+        Get-Alias
+        Import-Alias
+        New-Alias
+        Set-Alias
+
+    When you use these cmdlets, you do not need to specify the Alias: drive in the name.
+
+    The Alias provider supports all the cmdlets that have the Item noun except for the Invoke-Item cmdlet. And, it supports
+    the Get-Content and Set-Content cmdlets. The Alias provider does not support the cmdlets that have the ItemProperty
+    noun. And, the Alias provider does not support the Filter parameter in any cmdlet.
+
+    All changes to the aliases affect the current session only. To save the changes, add the changes to the Windows
+    PowerShell profile. Or, use the Export-Alias and Import-Alias cmdlets.
+
+CAPACIDADES
+
+
+TAREAS
+    TAREA: Getting to the Alias: Drive
+
+
+
+
+        -------------------------- EXAMPLE 1 --------------------------
+
+        This command changes the current location to the Alias: drive. You can use this command from any drive in Windows
+        PowerShell. To return to a file system drive, type the drive name. For example, type "set-location c:".
+
+        set-location alias:
+
+
+
+
+
+    TAREA: Getting Aliases
+
+
+
+
+        -------------------------- EXAMPLE 1 --------------------------
+
+        This command gets a list of all the aliases in the current session. You can use this command in any Windows
+        PowerShell drive.
+
+        get-item -path alias:
+
+
+
+        -------------------------- EXAMPLE 2 --------------------------
+
+        This command gets the "ls" alias. Because it includes the path, you can use it in any Windows PowerShell drive.
+
+        get-item -path alias:ls
+
+
+        If you are in the Alias: drive, you can omit the drive name from the path.
+        -------------------------- EXAMPLE 3 --------------------------
+
+        This command gets a list of the aliases that are associated with the Get-ChildItem cmdlet. It uses the Definition
+        property, which stores the cmdlet name.
+
+        get-item -path alias:* | where-object {$_.Definition -eq "Get-Childitem"}
+
+
+        When the aliased item is an executable file, the Definition contains the fully qualified path of the file.
+        -------------------------- EXAMPLE 4 --------------------------
+
+        This command gets the list of all the aliases when the current location is the Alias: drive. It uses a wildcard
+        character (*) to indicate all the contents of the current location.
+
+        get-item -path *
+
+
+        In the Alias: drive, a dot (.), which represents the current location, and a wildcard character (*), which
+        represents all items in the current location, have the same effect. For example, "get-item -path ." or "get-item *"
+        produce the same result.
+
+
+    TAREA: Creating a New Alias
+
+
+
+
+        -------------------------- EXAMPLE 1 --------------------------
+
+        This command creates the "serv" alias for the Get-Service cmdlet. Because the current location is in the Alias:
+        drive, the value of the Path parameter is a dot (.). The dot represents the current location.
+
+        This command also uses the Options dynamic parameter to set the AllScope and Constant options on the alias. The
+        Options parameter is available in the New-Item cmdlet only when you are in the Alias: drive.
+
+        new-item -path . -name serv -value Get-Service -Options "AllScope,Constant"
+
+
+        If you are in the Alias: drive, you can omit the drive name from the path.
+        -------------------------- EXAMPLE 2 --------------------------
+
+        You can create an alias for any item that invokes a command. This command creates the "np" alias for Notepad.exe.
+
+        new-item -path alias:np -value c:\windows\notepad.exe
+
+
+
+        -------------------------- EXAMPLE 3 --------------------------
+
+        You can create an alias for any function. You can use this feature to create an alias that includes both a cmdlet
+        and its parameters.
+
+        The first command creates the CD32 function, which changes the current directory to the System32 directory. The
+        second command creates the "go" alias for the CD32 function. The semi-colon (;) is the command separator.
+
+        When the command is complete, you can use either "CD32" or "go" to invoke the function.
+
+        function CD32 {set-location -path c:\windows\system32} set-item -path alias:go -value CD32
+
+
+
+
+
+    TAREA: Displaying the Properties and Methods of Aliases
+
+
+
+
+        -------------------------- EXAMPLE 1 --------------------------
+
+        This command uses the Get-Item cmdlet to get all aliases. The pipeline operator (|) sends the results to the
+        Get-Member cmdlet, which displays the methods and properties of the object.
+
+        get-item -path alias:* | get-member
+
+
+        When you pipe a collection of objects to Get-Member, such as the collection of aliases in the Alias: drive,
+        Get-Member evaluates each object in the collection separately. Then, Get-Member returns information about each
+        object type that it finds. If all the objects are of the same type, it returns information about the single object
+        type. In this case, all the aliases are AliasInfo objects.
+
+        To get information about the collection of AliasInfo objects, use the InputObject parameter of Get-Member. For
+        example, use the following command:
+
+            Get-Member -InputObject (Get-Item alias:*)
+
+        When you use InputObject, Get-Member evaluates the collection, not the objects in the collection.
+        -------------------------- EXAMPLE 2 --------------------------
+
+        This command lists the values of the properties of the "dir" alias. It uses the Get-Item cmdlet to get an object
+        that represents the "dir" alias. The pipeline operator (|) sends the results to the Format-List command. The
+        Format-List command uses the Property parameter with a wildcard character (*) to format and display the values of
+        all the "dir" alias properties.
+
+        get-item alias:dir | format-list -property *
+
+
+
+
+
+    TAREA: Changing the Properties of an Alias
+
+
+
+
+        -------------------------- EXAMPLE 1 --------------------------
+
+        You can use the Set-Item cmdlet with the Options dynamic parameter to change the value of the Options property of
+        an alias.
+
+        This command sets the AllScope and ReadOnly options for the "dir" alias. The command uses the Options dynamic
+        parameter of the Set-Item cmdlet. The Options parameter is available in Set-Item only when you use it with the
+        Alias or Function provider.
+
+        set-item -path alias:dir -options "AllScope,ReadOnly"
+
+
+
+        -------------------------- EXAMPLE 2 --------------------------
+
+        This command uses the Set-Item cmdlet to change the "gp" alias so that it represents the Get-Process cmdlet instead
+        of the Get-ItemProperty cmdlet. The Force parameter is required because the value of the Options property of the
+        "gp" alias is set to ReadOnly. Because the command is submitted from within the Alias: drive, the drive is not
+        specified in the path.
+
+        set-item -path gp -value get-process -force
+
+
+        The change affects the four properties that define the association between the alias and the command. To view the
+        effect of the change, type the following command:
+
+            get-item -path gp | format-list -property *
+        -------------------------- EXAMPLE 3 --------------------------
+
+        This command uses the Rename-Item cmdlet to change the "popd" alias to "pop".
+
+        rename-item -path alias:popd -newname pop
+
+
+
+
+
+    TAREA: Copying an Alias
+
+
+
+
+        -------------------------- EXAMPLE 1 --------------------------
+
+        This command copies the pushd alias so that a new push alias is created for the Push-Location cmdlet.
+
+        copy-item -path alias:pushd -destination alias:push
+
+
+        When the new alias is created, its Description property has a null value. And, its Option property has a value of
+        None.
+
+        If the command is issued from within the Alias: drive, you can omit the drive name from the value of the Path
+        parameter.
+
+
+    TAREA: Deleting an Alias
+
+
+
+
+        -------------------------- EXAMPLE 1 --------------------------
+
+        This command deletes the serv alias from the current session. You can use this command in any Windows PowerShell
+        drive.
+
+        remove-item -path alias:serv
+
+
+        If you are in the Alias: drive, you can omit the drive name from the path.
+        -------------------------- EXAMPLE 2 --------------------------
+
+        This command deletes aliases that begin with "s". It does not delete read-only aliases.
+
+        clear-item -path alias:s*
+
+
+
+        -------------------------- EXAMPLE 3 --------------------------
+
+        This command deletes all aliases from the current session, except those with a value of Constant for their Options
+        property. Without the Force parameter, the command does not delete aliases whose Options property has a value of
+        ReadOnly.
+
+        remove-item alias:* -force
+
+
+
+
+
+
+
+PARÁMETROS DINÁMICOS
+    -Options <System.Management.Automation.ScopedItemOptions>
+        Determines the value of the Options property of an alias.
+
+            None
+                No options. This value is the default.
+
+            Constant
+                The alias cannot be deleted and its properties cannot be changed. Constant is available only when you
+                create an alias. You cannot change the option of an existing alias to Constant.
+
+            Private
+                The alias is visible only in the current scope, not in the child scopes.
+
+            ReadOnly
+                The properties of the alias cannot be changed except by using the Force parameter. You can use Remove-Item
+                to delete the alias.
+
+            AllScope
+                The alias is copied to any new scopes that are created.
+
+
+        Cmdlets admitidos: New-Item, Set-Item
+
+
+NOTAS
+
+
+VÍNCULOS RELACIONADOS
+    about_Aliases
+    about_Providers
+
+
+
+PS C:\Users\Usuario> help Start-Transcript
+
+NOMBRE
+    Start-Transcript
+
+SINOPSIS
+    Creates a record of all or part of a Windows PowerShell session to a text file.
+
+
+SINTAXIS
+    Start-Transcript [[-LiteralPath] <String>] [-Append] [-Confirm] [-Force] [-IncludeInvocationHeader] [-NoClobber]
+    [-WhatIf] [<CommonParameters>]
+
+    Start-Transcript [[-OutputDirectory] <String>] [-Append] [-Confirm] [-Force] [-IncludeInvocationHeader] [-NoClobber]
+    [-WhatIf] [<CommonParameters>]
+
+    Start-Transcript [[-Path] <String>] [-Append] [-Confirm] [-Force] [-IncludeInvocationHeader] [-NoClobber] [-WhatIf]
+    [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Start-Transcript cmdlet creates a record of all or part of a Windows PowerShell session to a text file. The
+    transcript includes all command that the user types and all output that appears on the console.
+
+    Starting in Windows PowerShell 5.0, Start-Transcript includes the host name in the generated file name of all
+    transcripts. This is especially useful when your enterprise's logging is centralized. Files that are created by the
+    Start-Transcript cmdlet include random characters in names to prevent potential overwrites or duplication when two or
+    more transcripts are started simultaneously. This also prevents unauthorized discovery of transcripts that are stored
+    in a centralized file share. Additionally in Windows PowerShell 5.0, the Start-Transcript cmdlet works in Windows
+    PowerShell ISE.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821532
+    Stop-Transcript
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Start-Transcript -examples".
+    Para obtener más información, escriba: "get-help Start-Transcript -detailed".
+    Para obtener información técnica, escriba: "get-help Start-Transcript -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Start-Transcript -online"
+
+
+PS C:\Users\Usuario> Get-EventLog -LogName Security -Newest 100
+>> ErrorTerminación(Get-EventLog): "Acceso denegado al Registro solicitado."
+Get-EventLog : Acceso denegado al Registro solicitado.
+En línea: 1 Carácter: 1
++ Get-EventLog -LogName Security -Newest 100
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-EventLog], SecurityException
+    + FullyQualifiedErrorId : System.Security.SecurityException,Microsoft.PowerShell.Commands.GetEventLogCommand
+Get-EventLog : Acceso denegado al Registro solicitado.
+En línea: 1 Carácter: 1
++ Get-EventLog -LogName Security -Newest 100
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-EventLog], SecurityException
+    + FullyQualifiedErrorId : System.Security.SecurityException,Microsoft.PowerShell.Commands.GetEventLogCommand
+
+PS C:\Users\Usuario> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200129103048
+**********************

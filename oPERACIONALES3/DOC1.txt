@@ -1,0 +1,1 @@
+2) no se definio un path adecuado para el outfile

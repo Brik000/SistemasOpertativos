@@ -1,0 +1,1303 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200229023920
+Nombre de usuario: PC-SANTIAGO\santiago
+Usuario RunAs: PC-SANTIAGO\santiago
+Máquina: PC-SANTIAGO (Microsoft Windows NT 6.3.9600.0)
+Aplicación host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Id. de proceso: 5656
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\santiago\Documents\PowerShell_transcript.PC-SANTIAGO.yg
+dVlIPz.20200229023920.txt
+
+PS C:\Users\santiago> notepad doc1.txt
+
+PS C:\Users\santiago> notepad doc2.txt
+
+PS C:\Users\santiago> Compare-Object -ReferenceObject (Get-Content .\doc1.txt) -DifferenceObject (Get-Content .\doc2.txt)
+
+InputObject                                                 SideIndicator
+-----------                                                 -------------
+jose                                                        =>
+SANTIAGO                                                    <=
+
+
+
+PS C:\Users\santiago> get-service | export-csv servicios.csv | out-file
+>> ErrorTerminación(Out-File): "No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el valor del argumento "path" a un valor no nulo."
+out-file : No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el valor del
+argumento "path" a un valor no nulo.
+En línea: 1 Carácter: 42
++ get-service | export-csv servicios.csv | out-file
++                                          ~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Out-File], PSArgumentNullException
+    + FullyQualifiedErrorId : ArgumentNull,Microsoft.PowerShell.Commands.OutFileCommand
+
+
+PS C:\Users\santiago> get-service | export-csv servicios.csv -Delimiter ";"
+
+PS C:\Users\santiago> get-process | export-csv nc.csv -noclobber
+
+PS C:\Users\santiago> get-process | export-csv nc.csv -noclobber
+>> ErrorTerminación(Export-Csv): "El archivo 'C:\Users\santiago\nc.csv' ya existe."
+export-csv : El archivo 'C:\Users\santiago\nc.csv' ya existe.
+En línea: 1 Carácter: 15
++ get-process | export-csv nc.csv -noclobber
++               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceExists: (C:\Users\santiago\nc.csv:String) [Export-Csv], IOException
+    + FullyQualifiedErrorId : NoClobber,Microsoft.PowerShell.Commands.ExportCsvCommand
+
+
+PS C:\Users\santiago> get-process | export-csv clt.csv -useculture
+
+PS C:\Users\santiago> get-content -path .\clt.csv
+#TYPE System.Diagnostics.Process
+"__NounName","Name","Handles","VM","WS","PM","NPM","Path","Company","CPU","FileVersion","ProductVersion","Description",
+"Product","BasePriority","ExitCode","HasExited","ExitTime","Handle","SafeHandle","HandleCount","Id","MachineName","Main
+WindowHandle","MainWindowTitle","MainModule","MaxWorkingSet","MinWorkingSet","Modules","NonpagedSystemMemorySize","Nonp
+agedSystemMemorySize64","PagedMemorySize","PagedMemorySize64","PagedSystemMemorySize","PagedSystemMemorySize64","PeakPa
+gedMemorySize","PeakPagedMemorySize64","PeakWorkingSet","PeakWorkingSet64","PeakVirtualMemorySize","PeakVirtualMemorySi
+ze64","PriorityBoostEnabled","PriorityClass","PrivateMemorySize","PrivateMemorySize64","PrivilegedProcessorTime","Proce
+ssName","ProcessorAffinity","Responding","SessionId","StartInfo","StartTime","SynchronizingObject","Threads","TotalProc
+essorTime","UserProcessorTime","VirtualMemorySize","VirtualMemorySize64","EnableRaisingEvents","StandardInput","Standar
+dOutput","StandardError","WorkingSet","WorkingSet64","Site","Container"
+"Process","audiodg","396","74498048","13930496","10379264","13296",,,"49,796875",,,,,"8",,,,,,"396","6452",".","0","",,
+,,,"13296","13296","10379264","10379264","134920","134920","10530816","10530816","14016512","14016512","76627968","2199
+099883520",,,"10379264","10379264","00:00:01.4531250","audiodg",,"True","0","System.Diagnostics.ProcessStartInfo","29/0
+2/2020 2:53:38 a. m.",,"System.Diagnostics.ProcessThreadCollection","00:00:49.7968750","00:00:48.3437500","74498048","2
+199097753600","False",,,,"13930496","13930496",,
+"Process","Bluetooth Headset Helper","110","68927488","6873088","1478656","10080","C:\Program Files\Lenovo\Bluetooth So
+ftware\Bluetooth Headset Helper.exe","Broadcom Corporation.","0,015625","12.0.0.4900","12.0.0.4900","Bluetooth Headset
+Helper","Bluetooth Software","8",,"False",,"4816","Microsoft.Win32.SafeHandles.SafeProcessHandle","110","2376",".","0",
+"","System.Diagnostics.ProcessModule (Bluetooth Headset Helper.exe)","1413120","204800","System.Diagnostics.ProcessModu
+leCollection","10080","10080","1478656","1478656","135272","135272","1945600","1945600","6963200","6963200","81190912",
+"81190912","True","Normal","1478656","1478656","00:00:00.0156250","Bluetooth Headset Helper","255","True","1","System.D
+iagnostics.ProcessStartInfo","29/02/2020 2:24:19 a. m.",,"System.Diagnostics.ProcessThreadCollection","00:00:00.0156250
+","00:00:00","68927488","68927488","False",,,,"6873088","6873088",,
+"Process","BTStackServer","446","143167488","18116608","8716288","158160","C:\Program Files\Lenovo\Bluetooth Software\B
+tStackServer.exe","Broadcom Corporation.","0,5","12.0.0.4900","12.0.0.4900","Bluetooth Stack COM Server","Bluetooth Sof
+tware","8",,"False",,"4208","Microsoft.Win32.SafeHandles.SafeProcessHandle","446","6204",".","0","","System.Diagnostics
+.ProcessModule (BtStackServer.exe)","1413120","204800","System.Diagnostics.ProcessModuleCollection","158160","158160","
+8716288","8716288","243728","243728","9023488","9023488","18378752","18378752","172298240","172298240","True","Normal",
+"8716288","8716288","00:00:00.4062500","BTStackServer","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/20
+20 2:16:51 a. m.",,"System.Diagnostics.ProcessThreadCollection","00:00:00.5000000","00:00:00.0937500","143167488","1431
+67488","False",,,,"18116608","18116608",,
+"Process","BTTray","187","125001728","10985472","4956160","15712","C:\Program Files\Lenovo\Bluetooth Software\BTTray.ex
+e","Broadcom Corporation.","0,265625","12.0.0.4900","12.0.0.4900","Bluetooth Tray Application","Bluetooth Software","8"
+,,"False",,"4828","Microsoft.Win32.SafeHandles.SafeProcessHandle","187","5624",".","0","","System.Diagnostics.ProcessMo
+dule (BTTray.exe)","1413120","204800","System.Diagnostics.ProcessModuleCollection","15712","15712","4956160","4956160",
+"231320","231320","5636096","5636096","12345344","12345344","141729792","141729792","True","Normal","4956160","4956160"
+,"00:00:00.1562500","BTTray","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:16:51 a. m.",,"System
+.Diagnostics.ProcessThreadCollection","00:00:00.2656250","00:00:00.1093750","125001728","125001728","False",,,,"1098547
+2","10985472",,
+"Process","btwdins","143","64278528","6938624","1908736","10768",,,,,,,,"8",,,,,,"143","1544",".","0","",,,,,"10768","1
+0768","1908736","1908736","124312","124312","2822144","2822144","8495104","8495104","79998976","79998976",,,"1908736","
+1908736",,"btwdins",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollection",,,
+"64278528","64278528","False",,,,"6938624","6938624",,
+"Process","BtwRSupportService","100","63950848","5292032","1585152","9072",,,,,,,,"8",,,,,,"100","1504",".","0","",,,,,
+"9072","9072","1585152","1585152","122104","122104","1675264","1675264","5300224","5300224","67121152","67121152",,,"15
+85152","1585152",,"BtwRSupportService",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessT
+hreadCollection",,,"63950848","63950848","False",,,,"5292032","5292032",,
+"Process","CefSharp.BrowserSubprocess","458","469839872","43868160","41353216","44952","C:\Program Files (x86)\Razer\Ra
+zer Services\Razer Central\CefSharp.BrowserSubprocess.exe","The CefSharp Authors","0,546875","67.0.0.0","67.0.0.0","Cef
+Sharp.BrowserSubprocess","CefSharp","8",,"False",,"4224","Microsoft.Win32.SafeHandles.SafeProcessHandle","458","3140","
+.","0","","System.Diagnostics.ProcessModule (CefSharp.BrowserSubprocess.exe)","1413120","204800","System.Diagnostics.Pr
+ocessModuleCollection","44952","44952","41353216","41353216","654104","654104","207720448","207720448","81403904","8140
+3904","583188480","583188480","True","Normal","41353216","41353216","00:00:00.2031250","CefSharp.BrowserSubprocess","25
+5","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:16:54 a. m.",,"System.Diagnostics.ProcessThreadCollec
+tion","00:00:00.5468750","00:00:00.3437500","469839872","469839872","False",,,,"43868160","43868160",,
+"Process","CefSharp.BrowserSubprocess","397","446124032","106545152","61079552","43464","C:\Program Files (x86)\Razer\R
+azer Services\Razer Central\CefSharp.BrowserSubprocess.exe","The CefSharp Authors","7,1875","67.0.0.0","67.0.0.0","CefS
+harp.BrowserSubprocess","CefSharp","8",,"False",,"4848","Microsoft.Win32.SafeHandles.SafeProcessHandle","397","7140",".
+","0","","System.Diagnostics.ProcessModule (CefSharp.BrowserSubprocess.exe)","1413120","204800","System.Diagnostics.Pro
+cessModuleCollection","43464","43464","61079552","61079552","629616","629616","76230656","76230656","126586880","126586
+880","490516480","490516480","True","Normal","61079552","61079552","00:00:01.1562500","CefSharp.BrowserSubprocess","255
+","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:16:58 a. m.",,"System.Diagnostics.ProcessThreadCollect
+ion","00:00:07.1875000","00:00:06.0312500","446124032","446124032","False",,,,"106545152","106545152",,
+"Process","chrome","328","500019200","102699008","73154560","27488","C:\Program Files (x86)\Google\Chrome\Application\c
+hrome.exe","Google LLC","3,53125","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","4",,"False",,"4248",
+"Microsoft.Win32.SafeHandles.SafeProcessHandle","328","2664",".","0","","System.Diagnostics.ProcessModule (chrome.exe)"
+,"1413120","204800","System.Diagnostics.ProcessModuleCollection","27488","27488","73154560","73154560","514112","514112
+","96124928","96124928","126173184","126173184","466497536","2212374654976","True","Idle","73154560","73154560","00:00:
+00.2343750","chrome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:25:58 a. m.",,"System.Diagnos
+tics.ProcessThreadCollection","00:00:03.5312500","00:00:03.2968750","500019200","2208113209344","False",,,,"102699008",
+"102699008",,
+"Process","chrome","356","766758912","263667712","220131328","40496","C:\Program Files (x86)\Google\Chrome\Application\
+chrome.exe","Google LLC","52,21875","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","8",,"False",,"5340
+","Microsoft.Win32.SafeHandles.SafeProcessHandle","356","3876",".","0","","System.Diagnostics.ProcessModule (chrome.exe
+)","1413120","204800","System.Diagnostics.ProcessModuleCollection","40496","40496","220131328","220131328","584688","58
+4688","248422400","248422400","294686720","294686720","602996736","2216806121472","True","Normal","220131328","22013132
+8","00:00:02.2343750","chrome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:53:28 a. m.",,"Syst
+em.Diagnostics.ProcessThreadCollection","00:00:52.2187500","00:00:49.9843750","766758912","2204084981760","False",,,,"2
+63667712","263667712",,
+"Process","chrome","257","413024256","91480064","57577472","22624","C:\Program Files (x86)\Google\Chrome\Application\ch
+rome.exe","Google LLC","22,296875","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","8",,"False",,"4264"
+,"Microsoft.Win32.SafeHandles.SafeProcessHandle","257","3900",".","0","","System.Diagnostics.ProcessModule (chrome.exe)
+","1413120","204800","System.Diagnostics.ProcessModuleCollection","22624","22624","57577472","57577472","424744","42474
+4","63455232","63455232","95821824","95821824","258691072","2207871881216","True","Normal","57577472","57577472","00:00
+:01.5625000","chrome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:33:37 a. m.",,"System.Diagno
+stics.ProcessThreadCollection","00:00:22.2968750","00:00:20.7343750","413024256","2203731247104","False",,,,"91480064",
+"91480064",,
+"Process","chrome","212","277864448","13066240","6483968","16256","C:\Program Files (x86)\Google\Chrome\Application\chr
+ome.exe","Google LLC","3,46875","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","8",,"False",,"2644","M
+icrosoft.Win32.SafeHandles.SafeProcessHandle","212","4032",".","0","","System.Diagnostics.ProcessModule (chrome.exe)","
+1413120","204800","System.Diagnostics.ProcessModuleCollection","16256","16256","6483968","6483968","417912","417912","6
+733824","6733824","13090816","13090816","294658048","2199317913600","True","Normal","6483968","6483968","00:00:01.18750
+00","chrome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:53:38 a. m.",,"System.Diagnostics.Pro
+cessThreadCollection","00:00:03.4687500","00:00:02.2812500","277864448","2199301120000","False",,,,"13066240","13066240
+",,
+"Process","chrome","295","432865280","93044736","59580416","23520","C:\Program Files (x86)\Google\Chrome\Application\ch
+rome.exe","Google LLC","2,78125","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","4",,"False",,"3740","
+Microsoft.Win32.SafeHandles.SafeProcessHandle","295","4912",".","0","","System.Diagnostics.ProcessModule (chrome.exe)",
+"1413120","204800","System.Diagnostics.ProcessModuleCollection","23520","23520","59580416","59580416","475016","475016"
+,"76775424","76775424","111587328","111587328","258691072","2207871881216","True","Idle","59580416","59580416","00:00:0
+0.1875000","chrome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:38:41 a. m.",,"System.Diagnost
+ics.ProcessThreadCollection","00:00:02.7812500","00:00:02.5937500","432865280","2203751088128","False",,,,"93044736","9
+3044736",,
+"Process","chrome","268","410513408","82821120","52146176","20960","C:\Program Files (x86)\Google\Chrome\Application\ch
+rome.exe","Google LLC","2,625","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","4",,"False",,"3760","Mi
+crosoft.Win32.SafeHandles.SafeProcessHandle","268","4984",".","0","","System.Diagnostics.ProcessModule (chrome.exe)","1
+413120","204800","System.Diagnostics.ProcessModuleCollection","20960","20960","52146176","52146176","413824","413824","
+77238272","77238272","96333824","96333824","258691072","2207871881216","True","Idle","52146176","52146176","00:00:00.12
+50000","chrome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:19:46 a. m.",,"System.Diagnostics.
+ProcessThreadCollection","00:00:02.6250000","00:00:02.5000000","410513408","2203728736256","False",,,,"82821120","82821
+120",,
+"Process","chrome","149","330612736","11542528","8826880","13152","C:\Program Files (x86)\Google\Chrome\Application\chr
+ome.exe","Google LLC","0,0625","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","8",,"False",,"1860","Mi
+crosoft.Win32.SafeHandles.SafeProcessHandle","149","5004",".","0","","System.Diagnostics.ProcessModule (chrome.exe)","1
+413120","204800","System.Diagnostics.ProcessModuleCollection","13152","13152","8826880","8826880","515592","515592","88
+26880","8826880","11542528","11542528","330612736","2199353868288","True","Normal","8826880","8826880","00:00:00.031250
+0","chrome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:19:46 a. m.",,"System.Diagnostics.Proc
+essThreadCollection","00:00:00.0625000","00:00:00.0312500","330612736","2199353868288","False",,,,"11542528","11542528"
+,,
+"Process","chrome","196","364871680","35991552","19042304","16992","C:\Program Files (x86)\Google\Chrome\Application\ch
+rome.exe","Google LLC","0,25","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","8",,"False",,"3792","Mic
+rosoft.Win32.SafeHandles.SafeProcessHandle","196","5964",".","0","","System.Diagnostics.ProcessModule (chrome.exe)","14
+13120","204800","System.Diagnostics.ProcessModuleCollection","16992","16992","19042304","19042304","394040","394040","1
+9476480","19476480","35991552","35991552","275484672","2207888674816","True","Normal","19042304","19042304","00:00:00.1
+093750","chrome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:17:00 a. m.",,"System.Diagnostics
+.ProcessThreadCollection","00:00:00.2500000","00:00:00.1406250","364871680","2203683094528","False",,,,"35991552","3599
+1552",,
+"Process","chrome","262","420618240","87707648","52342784","22112","C:\Program Files (x86)\Google\Chrome\Application\ch
+rome.exe","Google LLC","4,484375","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","4",,"False",,"3800",
+"Microsoft.Win32.SafeHandles.SafeProcessHandle","262","6324",".","0","","System.Diagnostics.ProcessModule (chrome.exe)"
+,"1413120","204800","System.Diagnostics.ProcessModuleCollection","22112","22112","52342784","52342784","402328","402328
+","61755392","61755392","94449664","94449664","275525632","2207888715776","True","Idle","52342784","52342784","00:00:00
+.1718750","chrome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:38:36 a. m.",,"System.Diagnosti
+cs.ProcessThreadCollection","00:00:04.4843750","00:00:04.3125000","420618240","2203738841088","False",,,,"87707648","87
+707648",,
+"Process","chrome","419","368963584","40431616","24014848","25072","C:\Program Files (x86)\Google\Chrome\Application\ch
+rome.exe","Google LLC","16,78125","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","8",,"False",,"4368",
+"Microsoft.Win32.SafeHandles.SafeProcessHandle","419","6396",".","0","","System.Diagnostics.ProcessModule (chrome.exe)"
+,"1413120","204800","System.Diagnostics.ProcessModuleCollection","25072","25072","24014848","24014848","466160","466160
+","31944704","31944704","49086464","49086464","453849088","2199477104640","True","Normal","24014848","24014848","00:00:
+04.9843750","chrome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:17:00 a. m.",,"System.Diagnos
+tics.ProcessThreadCollection","00:00:16.7812500","00:00:11.7968750","368963584","2199392219136","False",,,,"40431616","
+40431616",,
+"Process","chrome","203","398356480","126541824","100782080","18400","C:\Program Files (x86)\Google\Chrome\Application\
+chrome.exe","Google LLC","11,09375","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","8",,"False",,"3064
+","Microsoft.Win32.SafeHandles.SafeProcessHandle","203","6412",".","0","","System.Diagnostics.ProcessModule (chrome.exe
+)","1413120","204800","System.Diagnostics.ProcessModuleCollection","18400","18400","100782080","100782080","398272","39
+8272","238579712","238579712","255942656","255942656","258691072","2207871881216","True","Normal","100782080","10078208
+0","00:00:00.9531250","chrome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:17:00 a. m.",,"Syst
+em.Diagnostics.ProcessThreadCollection","00:00:11.0937500","00:00:10.1406250","398356480","2203716579328","False",,,,"1
+26541824","126541824",,
+"Process","chrome","1557","819208192","179097600","117051392","58688","C:\Program Files (x86)\Google\Chrome\Application
+\chrome.exe","Google LLC","101,828125","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","8",,"False",,"5
+124","Microsoft.Win32.SafeHandles.SafeProcessHandle","1557","6660",".","66442","SistemasOperacionales2020/PowerShell- T
+aller Clase 3 - Manuel Quintero.txt at master ? manuelq12/SistemasOperacionales2020 ? GitHub - Google Chrome","System.D
+iagnostics.ProcessModule (chrome.exe)","1413120","204800","System.Diagnostics.ProcessModuleCollection","58688","58688",
+"117051392","117051392","904640","904640","281722880","281722880","294985728","294985728","966103040","2199989358592","
+True","Normal","117051392","117051392","00:00:33.8281250","chrome","255","True","1","System.Diagnostics.ProcessStartInf
+o","29/02/2020 2:17:00 a. m.",,"System.Diagnostics.ProcessThreadCollection","00:01:41.8281250","00:01:08","819208192","
+2199842463744","False",,,,"179097600","179097600",,
+"Process","chrome","175","111398912","5263360","1363968","8304","C:\Program Files (x86)\Google\Chrome\Application\chrom
+e.exe","Google LLC","0,03125","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","8",,"False",,"5136","Mic
+rosoft.Win32.SafeHandles.SafeProcessHandle","175","6664",".","0","","System.Diagnostics.ProcessModule (chrome.exe)","14
+13120","204800","System.Diagnostics.ProcessModuleCollection","8304","8304","1363968","1363968","119408","119408","14786
+56","1478656","5287936","5287936","128323584","2199151579136","True","Normal","1363968","1363968","00:00:00.0156250","c
+hrome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:17:00 a. m.",,"System.Diagnostics.ProcessTh
+readCollection","00:00:00.0312500","00:00:00.0156250","111398912","2199134654464","False",,,,"5263360","5263360",,
+"Process","chrome","90","107737088","6586368","1626112","8944","C:\Program Files (x86)\Google\Chrome\Application\chrome
+.exe","Google LLC","0,078125","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","8",,"False",,"5140","Mic
+rosoft.Win32.SafeHandles.SafeProcessHandle","90","6776",".","0","","System.Diagnostics.ProcessModule (chrome.exe)","141
+3120","204800","System.Diagnostics.ProcessModuleCollection","8944","8944","1626112","1626112","174816","174816","172032
+0","1720320","6602752","6602752","116264960","2199139520512","True","Normal","1626112","1626112","00:00:00.0625000","ch
+rome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:17:00 a. m.",,"System.Diagnostics.ProcessThr
+eadCollection","00:00:00.0781250","00:00:00.0156250","107737088","2199130992640","False",,,,"6586368","6586368",,
+"Process","chrome","425","701087744","136527872","117932032","35248","C:\Program Files (x86)\Google\Chrome\Application\
+chrome.exe","Google LLC","53,28125","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","10",,"False",,"525
+6","Microsoft.Win32.SafeHandles.SafeProcessHandle","425","6912",".","0","","System.Diagnostics.ProcessModule (chrome.ex
+e)","1413120","204800","System.Diagnostics.ProcessModuleCollection","35248","35248","117932032","117932032","737944","7
+37944","155725824","155725824","176123904","176123904","786853888","2199810109440","True","AboveNormal","117932032","11
+7932032","00:00:21.0468750","chrome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:17:00 a. m.",
+,"System.Diagnostics.ProcessThreadCollection","00:00:53.2812500","00:00:32.2343750","701087744","2199724343296","False"
+,,,,"136527872","136527872",,
+"Process","chrome","246","430862336","90509312","54767616","22112","C:\Program Files (x86)\Google\Chrome\Application\ch
+rome.exe","Google LLC","18,03125","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","4",,"False",,"4440",
+"Microsoft.Win32.SafeHandles.SafeProcessHandle","246","7620",".","0","","System.Diagnostics.ProcessModule (chrome.exe)"
+,"1413120","204800","System.Diagnostics.ProcessModuleCollection","22112","22112","54767616","54767616","406208","406208
+","95608832","95608832","130469888","130469888","258691072","2207871881216","True","Idle","54767616","54767616","00:00:
+00.7656250","chrome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:20:17 a. m.",,"System.Diagnos
+tics.ProcessThreadCollection","00:00:18.0312500","00:00:17.2656250","430862336","2203749085184","False",,,,"90509312","
+90509312",,
+"Process","chrome","185","337534976","22032384","13217792","16096","C:\Program Files (x86)\Google\Chrome\Application\ch
+rome.exe","Google LLC","0,0625","80.0.3987.122","80.0.3987.122","Google Chrome","Google Chrome","4",,"False",,"2624","M
+icrosoft.Win32.SafeHandles.SafeProcessHandle","185","8964",".","0","","System.Diagnostics.ProcessModule (chrome.exe)","
+1413120","204800","System.Diagnostics.ProcessModuleCollection","16096","16096","13217792","13217792","402232","402232",
+"14471168","14471168","22032384","22032384","258691072","2207871881216","True","Idle","13217792","13217792","00:00:00.0
+312500","chrome","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:53:29 a. m.",,"System.Diagnostics
+.ProcessThreadCollection","00:00:00.0625000","00:00:00.0312500","337534976","2203655757824","False",,,,"22032384","2203
+2384",,
+"Process","conhost","121","111116288","11497472","3223552","11248","C:\Windows\system32\conhost.exe","Microsoft Corpora
+tion","4,046875","6.3.9600.16384 (winblue_rtm.130821-1623)","6.3.9600.16384","Host de ventana de consola","Sistema oper
+ativo Microsoft? Windows?","8",,"False",,"4472","Microsoft.Win32.SafeHandles.SafeProcessHandle","121","5664",".","0",""
+,"System.Diagnostics.ProcessModule (conhost.exe)","1413120","204800","System.Diagnostics.ProcessModuleCollection","1124
+8","11248","3223552","3223552","217192","217192","3358720","3358720","14209024","14209024","121131008","2199144386560",
+"True","Normal","3223552","3223552","00:00:03.2968750","conhost","255","True","1","System.Diagnostics.ProcessStartInfo"
+,"29/02/2020 2:16:44 a. m.",,"System.Diagnostics.ProcessThreadCollection","00:00:04.0468750","00:00:00.7500000","111116
+288","2199134371840","False",,,,"11497472","11497472",,
+"Process","csrss","392","49254400","4231168","1941504","14272",,,,,,,,"13",,,,,,"392","544",".","0","",,,,,"14272","142
+72","1941504","1941504","149536","149536","1994752","1994752","39006208","39006208","52080640","52080640",,,"1941504","
+1941504",,"csrss",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollection",,,"4
+9254400","49254400","False",,,,"4231168","4231168",,
+"Process","csrss","487","84705280","37453824","2994176","44480",,,,,,,,"13",,,,,,"487","620",".","0","",,,,,"44480","44
+480","2994176","2994176","241856","241856","18726912","18726912","53661696","53661696","100958208","100958208",,,"29941
+76","2994176",,"csrss",,"True","1","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollection"
+,,,"84705280","84705280","False",,,,"37453824","37453824",,
+"Process","daemonu","186","74612736","7733248","4403200","15592",,,,,,,,"8",,,,,,"186","6420",".","0","",,,,,"15592","1
+5592","4403200","4403200","140384","140384","4546560","4546560","7733248","7733248","77258752","77258752",,,"4403200","
+4403200",,"daemonu",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollection",,,
+"74612736","74612736","False",,,,"7733248","7733248",,
+"Process","dasHost","397","88985600","15683584","6213632","19168",,,,,,,,"8",,,,,,"397","1656",".","0","",,,,,"19168","
+19168","6213632","6213632","175736","175736","8552448","8552448","17620992","17620992","97505280","2199120760832",,,"62
+13632","6213632",,"dasHost",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollec
+tion",,,"88985600","2199112241152","False",,,,"15683584","15683584",,
+"Process","dllhost","115","57303040","7090176","1667072","7408",,,,,,,,"8",,,,,,"115","408",".","0","",,,,,"7408","7408
+","1667072","1667072","111160","111160","1933312","1933312","7159808","7159808","62586880","2199085842432",,,"1667072",
+"1667072",,"dllhost",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollection",,
+,"57303040","2199080558592","False",,,,"7090176","7090176",,
+"Process","dwm","194","201650176","30785536","19755008","23200",,,,,,,,"13",,,,,,"194","1096",".","0","",,,,,"23200","2
+3200","19755008","19755008","394144","394144","22118400","22118400","36409344","36409344","238505984","2199261761536",,
+,"19755008","19755008",,"dwm",,"True","1","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadColl
+ection",,,"201650176","2199224905728","False",,,,"30785536","30785536",,
+"Process","EpicGamesLauncher","570","646758400","94265344","144535552","78864","C:\Program Files (x86)\Epic Games\Launc
+her\Portal\Binaries\Win64\EpicGamesLauncher.exe","","2,984375","","","","","8",,"False",,"4924","Microsoft.Win32.SafeHa
+ndles.SafeProcessHandle","570","5376",".","0","","System.Diagnostics.ProcessModule (EpicGamesLauncher.exe)","1413120","
+204800","System.Diagnostics.ProcessModuleCollection","78864","78864","144535552","144535552","725736","725736","1850122
+24","185012224","132845568","132845568","687923200","687923200","True","Normal","144535552","144535552","00:00:01.54687
+50","EpicGamesLauncher","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:16:40 a. m.",,"System.Diag
+nostics.ProcessThreadCollection","00:00:02.9843750","00:00:01.4375000","646758400","646758400","False",,,,"94265344","9
+4265344",,
+"Process","explorer","2172","688775168","108924928","71892992","109840","C:\Windows\Explorer.EXE","Microsoft Corporatio
+n","33,21875","6.3.9600.17031 (winblue_gdr.140221-1952)","6.3.9600.17031","Explorador de Windows","Sistema operativo Mi
+crosoft? Windows?","8",,"False",,"4548","Microsoft.Win32.SafeHandles.SafeProcessHandle","2172","540",".","65710","","Sy
+stem.Diagnostics.ProcessModule (Explorer.EXE)","1413120","204800","System.Diagnostics.ProcessModuleCollection","109840"
+,"109840","71892992","71892992","1398432","1398432","87420928","87420928","142696448","142696448","883138560","21999063
+94112","True","Normal","71892992","71892992","00:00:22.7968750","explorer","255","True","1","System.Diagnostics.Process
+StartInfo","29/02/2020 2:16:28 a. m.",,"System.Diagnostics.ProcessThreadCollection","00:00:33.2187500","00:00:10.421875
+0","688775168","2199712030720","False",,,,"108924928","108924928",,
+"Process","GameManagerService","370","143470592","37732352","14860288","36216",,,,,,,,"8",,,,,,"370","1896",".","0","",
+,,,,"36216","36216","14860288","14860288","208712","208712","15634432","15634432","37875712","37875712","155947008","15
+5947008",,,"14860288","14860288",,"GameManagerService",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diag
+nostics.ProcessThreadCollection",,,"143470592","143470592","False",,,,"37732352","37732352",,
+"Process","IAStorDataMgrSvc","380","200323072","54992896","28073984","43048",,,,,,,,"8",,,,,,"380","9048",".","0","",,,
+,,"43048","43048","28073984","28073984","303104","303104","28254208","28254208","55025664","55025664","214384640","2143
+84640",,,"28073984","28073984",,"IAStorDataMgrSvc",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnost
+ics.ProcessThreadCollection",,,"200323072","200323072","False",,,,"54992896","54992896",,
+"Process","IAStorIcon","300","236904448","40804352","19185664","31816","C:\Program Files\Intel\Intel(R) Rapid Storage T
+echnology\IAStorIcon.exe","Intel Corporation","1,53125","12.0.0.1083","12.0.0.1083","IAStorIcon","IAStorIcon","8",,"Fal
+se",,"4584","Microsoft.Win32.SafeHandles.SafeProcessHandle","300","8372",".","0","","System.Diagnostics.ProcessModule (
+IAStorIcon.exe)","1413120","204800","System.Diagnostics.ProcessModuleCollection","31816","31816","19185664","19185664",
+"379224","379224","20131840","20131840","41123840","41123840","254996480","254996480","True","Normal","19185664","19185
+664","00:00:00.0937500","IAStorIcon","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:17:40 a. m.",
+,"System.Diagnostics.ProcessThreadCollection","00:00:01.5312500","00:00:01.4375000","236904448","236904448","False",,,,
+"40804352","40804352",,
+"Process","Idle","0","65536","4096","0","0",,,,,,,,"0",,,,,,"0","0",".","0","",,,,,"0","0","0","0","0","0","0","0","409
+6","4096","65536","65536",,,"0","0",,"Idle",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.Pro
+cessThreadCollection",,,"65536","65536","False",,,,"4096","4096",,
+"Process","igfxCUIService","152","44060672","6754304","1736704","9824",,,,,,,,"8",,,,,,"152","412",".","0","",,,,,"9824
+","9824","1736704","1736704","80792","80792","1863680","1863680","6782976","6782976","47230976","47230976",,,"1736704",
+"1736704",,"igfxCUIService",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollec
+tion",,,"44060672","44060672","False",,,,"6754304","6754304",,
+"Process","igfxEM","154","109203456","9879552","3375104","12512","C:\Windows\system32\igfxEM.exe","Intel Corporation","
+0,078125","6.15.10.4264","6.15.10.4264","igfxEM Module","Intel(R) Common User Interface","8",,"False",,"4100","Microsof
+t.Win32.SafeHandles.SafeProcessHandle","154","4280",".","0","","System.Diagnostics.ProcessModule (igfxEM.exe)","1413120
+","204800","System.Diagnostics.ProcessModuleCollection","12512","12512","3375104","3375104","207184","207184","3497984"
+,"3497984","9895936","9895936","112373760","112373760","True","Normal","3375104","3375104","00:00:00.0625000","igfxEM",
+"255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:16:29 a. m.",,"System.Diagnostics.ProcessThreadCol
+lection","00:00:00.0781250","00:00:00.0156250","109203456","109203456","False",,,,"9879552","9879552",,
+"Process","igfxHK","109","71262208","7450624","2035712","9184","C:\Windows\system32\igfxHK.exe","Intel Corporation","0,
+03125","6.15.10.4264","6.15.10.4264","igfxHK Module","Intel(R) Common User Interface","8",,"False",,"2824","Microsoft.W
+in32.SafeHandles.SafeProcessHandle","109","4288",".","0","","System.Diagnostics.ProcessModule (igfxHK.exe)","1413120","
+204800","System.Diagnostics.ProcessModuleCollection","9184","9184","2035712","2035712","135808","135808","2707456","270
+7456","7471104","7471104","75161600","75161600","True","Normal","2035712","2035712","00:00:00.0312500","igfxHK","255","
+True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:16:29 a. m.",,"System.Diagnostics.ProcessThreadCollection
+","00:00:00.0312500","00:00:00","71262208","71262208","False",,,,"7450624","7450624",,
+"Process","igfxTray","185","105066496","9068544","3117056","11488","C:\Windows\system32\igfxTray.exe",,"0,15625",,,,,"8
+",,"False",,"4616","Microsoft.Win32.SafeHandles.SafeProcessHandle","185","4296",".","0","","System.Diagnostics.ProcessM
+odule (igfxTray.exe)","1413120","204800","System.Diagnostics.ProcessModuleCollection","11488","11488","3117056","311705
+6","198824","198824","3575808","3575808","9265152","9265152","108244992","108244992","True","Normal","3117056","3117056
+","00:00:00.1250000","igfxTray","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:16:29 a. m.",,"Sys
+tem.Diagnostics.ProcessThreadCollection","00:00:00.1562500","00:00:00.0312500","105066496","105066496","False",,,,"9068
+544","9068544",,
+"Process","jusched","93","88633344","5410816","1335296","8928","C:\Program Files (x86)\Common Files\Java\Java Update\ju
+sched.exe","Oracle Corporation","0,015625","2.8.181.13","2.8.181.13","Java Update Scheduler","Java Platform SE Auto Upd
+ater","8",,"False",,"4624","Microsoft.Win32.SafeHandles.SafeProcessHandle","93","6160",".","0","","System.Diagnostics.P
+rocessModule (jusched.exe)","1413120","204800","System.Diagnostics.ProcessModuleCollection","8928","8928","1335296","13
+35296","176528","176528","1478656","1478656","5468160","5468160","91279360","91279360","True","Normal","1335296","13352
+96","00:00:00.0156250","jusched","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:16:51 a. m.",,"Sy
+stem.Diagnostics.ProcessThreadCollection","00:00:00.0156250","00:00:00","88633344","88633344","False",,,,"5410816","541
+0816",,
+"Process","lsass","1182","41512960","14340096","5967872","19328",,,,,,,,"9",,,,,,"1182","724",".","0","",,,,,"19328","1
+9328","5967872","5967872","119240","119240","6340608","6340608","14372864","14372864","42840064","2199066095616",,,"596
+7872","5967872",,"lsass",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollectio
+n",,,"41512960","2199064768512","False",,,,"14340096","14340096",,
+"Process","mDNSResponder","117","30552064","5226496","1536000","11440",,,,,,,,"8",,,,,,"117","1524",".","0","",,,,,"114
+40","11440","1536000","1536000","60592","60592","1732608","1732608","5316608","5316608","34775040","34775040",,,"153600
+0","1536000",,"mDNSResponder",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadColl
+ection",,,"30552064","30552064","False",,,,"5226496","5226496",,
+"Process","MpCmdRun","307","42188800","9416704","2969600","11920",,,,,,,,"8",,,,,,"307","8848",".","0","",,,,,"11920","
+11920","2969600","2969600","99184","99184","3289088","3289088","9990144","9990144","47710208","2199070965760",,,"296960
+0","2969600",,"MpCmdRun",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollectio
+n",,,"42188800","2199065444352","False",,,,"9416704","9416704",,
+"Process","MsMpEng","436","483897344","104087552","151289856","65120",,,,,,,,"8",,,,,,"436","2056",".","0","",,,,,"6512
+0","65120","151289856","151289856","493944","493944","592396288","592396288","632045568","632045568","886161408","21999
+09416960",,,"151289856","151289856",,"MsMpEng",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.
+ProcessThreadCollection",,,"483897344","2199507152896","False",,,,"104087552","104087552",,
+"Process","NisSrv","274","55418880","7950336","11030528","19920",,,,,,,,"8",,,,,,"274","6808",".","0","",,,,,"19920","1
+9920","11030528","11030528","93088","93088","41680896","41680896","37412864","37412864","84140032","2199107395584",,,"1
+1030528","11030528",,"NisSrv",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadColl
+ection",,,"55418880","2199078674432","False",,,,"7950336","7950336",,
+"Process","notepad","108","108683264","8794112","1703936","9840","C:\Windows\system32\NOTEPAD.EXE","Microsoft Corporati
+on","0,5625","6.3.9600.16384 (winblue_rtm.130821-1623)","6.3.9600.16384","Bloc de notas","Sistema operativo Microsoft?
+Windows?","8",,"False",,"3604","Microsoft.Win32.SafeHandles.SafeProcessHandle","108","2548",".","1049568","DOC1: Bloc d
+e notas","System.Diagnostics.ProcessModule (NOTEPAD.EXE)","1413120","204800","System.Diagnostics.ProcessModuleCollectio
+n","9840","9840","1703936","1703936","212216","212216","1888256","1888256","8822784","8822784","116977664","21991402332
+16","True","Normal","1703936","1703936","00:00:00.4062500","notepad","255","True","1","System.Diagnostics.ProcessStartI
+nfo","29/02/2020 2:52:56 a. m.",,"System.Diagnostics.ProcessThreadCollection","00:00:00.5625000","00:00:00.1562500","10
+8683264","2199131938816","False",,,,"8794112","8794112",,
+"Process","NVDisplay.Container","196","73834496","10199040","4018176","11760",,,,,,,,"8",,,,,,"196","1720",".","0","",,
+,,,"11760","11760","4018176","4018176","128456","128456","4182016","4182016","10661888","10661888","82022400","82022400
+",,,"4018176","4018176",,"NVDisplay.Container",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.
+ProcessThreadCollection",,,"73834496","73834496","False",,,,"10199040","10199040",,
+"Process","nvxdsync","305","189214720","22474752","9850880","20848",,,,,,,,"8",,,,,,"305","1996",".","0","",,,,,"20848"
+,"20848","9850880","9850880","289216","289216","32030720","32030720","46731264","46731264","203075584","203075584",,,"9
+850880","9850880",,"nvxdsync",,"True","1","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadColl
+ection",,,"189214720","189214720","False",,,,"22474752","22474752",,
+"Process","OfficeClickToRun","666","204341248","57028608","37867520","29024",,,,,,,,"8",,,,,,"666","1580",".","0","",,,
+,,"29024","29024","37867520","37867520","278848","278848","73904128","73904128","87515136","87515136","233984000","2199
+257239552",,,"37867520","37867520",,"OfficeClickToRun",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diag
+nostics.ProcessThreadCollection",,,"204341248","2199227596800","False",,,,"57028608","57028608",,
+"Process","pcee4","272","600879104","294912","23117824","29272","C:\Program Files (x86)\Dolby Home Theater v4\pcee4.exe
+","Dolby Laboratories Inc.","1,8125","7.2.8000.17","7.2.8000.17","Dolby Profile Selector","Dolby Profile Selector","6",
+,"False",,"3548","Microsoft.Win32.SafeHandles.SafeProcessHandle","272","5944",".","0","","System.Diagnostics.ProcessMod
+ule (pcee4.exe)","1413120","204800","System.Diagnostics.ProcessModuleCollection","29272","29272","23117824","23117824",
+"349640","349640","40202240","40202240","53800960","53800960","606097408","606097408","True","BelowNormal","23117824","
+23117824","00:00:00.2812500","pcee4","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:16:49 a. m.",
+,"System.Diagnostics.ProcessThreadCollection","00:00:01.8125000","00:00:01.5312500","600879104","600879104","False",,,,
+"294912","294912",,
+"Process","powershell","825","627179520","142516224","123506688","54824","C:\Windows\System32\WindowsPowerShell\v1.0\po
+wershell.exe","Microsoft Corporation","9,171875","6.3.9600.17396 (winblue_r4.141007-2030)","6.3.9600.17396","Windows Po
+werShell","Sistema operativo Microsoft? Windows?","8",,"False",,"5024","Microsoft.Win32.SafeHandles.SafeProcessHandle",
+"825","5656",".","327830","Windows PowerShell","System.Diagnostics.ProcessModule (powershell.exe)","1413120","204800","
+System.Diagnostics.ProcessModuleCollection","54824","54824","123506688","123506688","375472","375472","144797696","1447
+97696","152674304","152674304","724795392","2199748050944","True","Normal","123506688","123506688","00:00:03.0312500","
+powershell","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:16:44 a. m.",,"System.Diagnostics.Proc
+essThreadCollection","00:00:09.1718750","00:00:06.1406250","627179520","2199650435072","False",,,,"142516224","14251622
+4",,
+"Process","PresentationFontCache","175","538497024","20348928","26992640","26512",,,,,,,,"8",,,,,,"175","3496",".","0",
+"",,,,,"26512","26512","26992640","26992640","238648","238648","29126656","29126656","20398080","20398080","542724096",
+"542724096",,,"26992640","26992640",,"PresentationFontCache",,"True","0","System.Diagnostics.ProcessStartInfo",,,"Syste
+m.Diagnostics.ProcessThreadCollection",,,"538497024","538497024","False",,,,"20348928","20348928",,
+"Process","RAVBg64","228","116043776","10604544","5181440","13280","C:\Program Files\Realtek\Audio\HDA\RAVBg64.exe","Re
+altek Semiconductor","0,03125","1.0.0.132","1.0.0.132","HD Audio Background Process","HD Audio Background Process","8",
+,"False",,"5036","Microsoft.Win32.SafeHandles.SafeProcessHandle","228","5292",".","0","","System.Diagnostics.ProcessMod
+ule (RAVBg64.exe)","1413120","204800","System.Diagnostics.ProcessModuleCollection","13280","13280","5181440","5181440",
+"216480","216480","5328896","5328896","10657792","10657792","119214080","119214080","True","Normal","5181440","5181440"
+,"00:00:00","RAVBg64","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:16:40 a. m.",,"System.Diagno
+stics.ProcessThreadCollection","00:00:00.0312500","00:00:00.0312500","116043776","116043776","False",,,,"10604544","106
+04544",,
+"Process","RAVCpl64","280","125255680","10022912","3530752","13664","C:\Program Files\Realtek\Audio\HDA\RAVCpl64.exe","
+Realtek Semiconductor","0,0625","1, 0, 0, 845","1, 0, 0, 845","Realtek HD Audio Manager","Realtek HD Audio Manager","8"
+,,"False",,"1444","Microsoft.Win32.SafeHandles.SafeProcessHandle","280","5220",".","0","","System.Diagnostics.ProcessMo
+dule (RAVCpl64.exe)","1413120","204800","System.Diagnostics.ProcessModuleCollection","13664","13664","3530752","3530752
+","243480","243480","4706304","4706304","10842112","10842112","133533696","133533696","True","Normal","3530752","353075
+2","00:00:00.0468750","RAVCpl64","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:16:39 a. m.",,"Sy
+stem.Diagnostics.ProcessThreadCollection","00:00:00.0625000","00:00:00.0156250","125255680","125255680","False",,,,"100
+22912","10022912",,
+"Process","Razer Central","1158","557850624","117690368","69267456","92712","C:\Program Files (x86)\Razer\Razer Service
+s\Razer Central\Razer Central.exe","Razer Inc.","76,734375","7.3.23.124","7.3.23.124","Razer Central","Razer Central","
+8",,"False",,"5300","Microsoft.Win32.SafeHandles.SafeProcessHandle","1158","6368",".","0","","System.Diagnostics.Proces
+sModule (Razer Central.exe)","1413120","204800","System.Diagnostics.ProcessModuleCollection","92712","92712","69267456"
+,"69267456","905944","905944","75153408","75153408","120872960","120872960","585494528","585494528","True","Normal","69
+267456","69267456","00:00:24.2656250","Razer Central","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/202
+0 2:16:52 a. m.",,"System.Diagnostics.ProcessThreadCollection","00:01:16.7343750","00:00:52.4687500","557850624","55785
+0624","False",,,,"117690368","117690368",,
+"Process","Razer Synapse 3","1016","364257280","49950720","24784896","53736","C:\Program Files (x86)\Razer\Synapse3\WPF
+UI\Framework\Razer Synapse 3 Host\Razer Synapse 3.exe","Razer Inc.","2,171875","3.1.627.5","3.1.627.5","Razer Synapse 3
+","Razer Synapse 3","8",,"False",,"1624","Microsoft.Win32.SafeHandles.SafeProcessHandle","1016","3872",".","0","","Syst
+em.Diagnostics.ProcessModule (Razer Synapse 3.exe)","1413120","204800","System.Diagnostics.ProcessModuleCollection","53
+736","53736","24784896","24784896","631184","631184","24940544","24940544","50020352","50020352","374935552","374935552
+","True","Normal","24784896","24784896","00:00:00.2343750","Razer Synapse 3","255","True","1","System.Diagnostics.Proce
+ssStartInfo","29/02/2020 2:16:47 a. m.",,"System.Diagnostics.ProcessThreadCollection","00:00:02.1718750","00:00:01.9375
+000","364257280","364257280","False",,,,"49950720","49950720",,
+"Process","Razer Synapse Service","2142","348676096","112644096","62099456","193256",,,,,,,,"8",,,,,,"2142","2792",".",
+"0","",,,,,"193256","193256","62099456","62099456","464072","464072","62402560","62402560","112672768","112672768","354
+033664","354033664",,,"62099456","62099456",,"Razer Synapse Service",,"True","0","System.Diagnostics.ProcessStartInfo",
+,,"System.Diagnostics.ProcessThreadCollection",,,"348676096","348676096","False",,,,"112644096","112644096",,
+"Process","Razer Synapse Service Process","609","267218944","51130368","26558464","52920","C:\Program Files (x86)\Razer
+\Synapse3\Service\..\UserProcess\Razer Synapse Service Process.exe","","3,078125","1.0.0.0","1.0.0.0","Razer Synapse Se
+rvice Process","Razer Synapse Service Process","8",,"False",,"4000","Microsoft.Win32.SafeHandles.SafeProcessHandle","60
+9","3792",".","0","","System.Diagnostics.ProcessModule (Razer Synapse Service Process.exe)","1413120","204800","System.
+Diagnostics.ProcessModuleCollection","52920","52920","26558464","26558464","417160","417160","30547968","30547968","550
+62528","55062528","275156992","275156992","True","Normal","26558464","26558464","00:00:00.5781250","Razer Synapse Servi
+ce Process","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:16:28 a. m.",,"System.Diagnostics.Proc
+essThreadCollection","00:00:03.0781250","00:00:02.5000000","267218944","267218944","False",,,,"51130368","51130368",,
+"Process","RazerCentralService","780","177311744","61911040","28602368","52504",,,,,,,,"8",,,,,,"780","1392",".","0",""
+,,,,,"52504","52504","28602368","28602368","275680","275680","30294016","30294016","62869504","62869504","194314240","1
+94314240",,,"28602368","28602368",,"RazerCentralService",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Di
+agnostics.ProcessThreadCollection",,,"177311744","177311744","False",,,,"61911040","61911040",,
+"Process","RIconMan","112","71446528","6008832","1675264","9696",,,,,,,,"8",,,,,,"112","1684",".","0","",,,,,"9696","96
+96","1675264","1675264","135192","135192","1765376","1765376","6008832","6008832","73560064","73560064",,,"1675264","16
+75264",,"RIconMan",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollection",,,"
+71446528","71446528","False",,,,"6008832","6008832",,
+"Process","rundll32","90","114540544","5431296","3575808","9584","C:\Windows\SysWOW64\RunDll32.exe","Microsoft Corporat
+ion","0","6.3.9600.16384 (winblue_rtm.130821-1623)","6.3.9600.16384","Proceso host de Windows (Rundll32)","Sistema oper
+ativo Microsoft? Windows?","8",,"False",,"3836","Microsoft.Win32.SafeHandles.SafeProcessHandle","90","8808",".","0","",
+"System.Diagnostics.ProcessModule (RunDll32.exe)","1413120","204800","System.Diagnostics.ProcessModuleCollection","9584
+","9584","3575808","3575808","164096","164096","3575808","3575808","5431296","5431296","114540544","114540544","True","
+Normal","3575808","3575808","00:00:00","rundll32","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:
+19:51 a. m.",,"System.Diagnostics.ProcessThreadCollection","00:00:00","00:00:00","114540544","114540544","False",,,,"54
+31296","5431296",,
+"Process","RuntimeBroker","105","78041088","6889472","1486848","7408","C:\Windows\System32\RuntimeBroker.exe","Microsof
+t Corporation","0,015625","6.3.9600.17415 (winblue_r4.141028-1500)","6.3.9600.17415","Runtime Broker","Microsoft? Windo
+ws? Operating System","8",,"False",,"3104","Microsoft.Win32.SafeHandles.SafeProcessHandle","105","6460",".","0","","Sys
+tem.Diagnostics.ProcessModule (RuntimeBroker.exe)","1413120","204800","System.Diagnostics.ProcessModuleCollection","740
+8","7408","1486848","1486848","151680","151680","1695744","1695744","6922240","6922240","79638528","2199102894080","Tru
+e","Normal","1486848","1486848","00:00:00","RuntimeBroker","255","True","1","System.Diagnostics.ProcessStartInfo","29/0
+2/2020 2:17:00 a. m.",,"System.Diagnostics.ProcessThreadCollection","00:00:00.0156250","00:00:00.0156250","78041088","2
+199101296640","False",,,,"6889472","6889472",,
+"Process","RzSDKServer","89","36818944","6336512","1691648","11360",,,,,,,,"8",,,,,,"89","1800",".","0","",,,,,"11360",
+"11360","1691648","1691648","66408","66408","1990656","1990656","6426624","6426624","42110976","42110976",,,"1691648","
+1691648",,"RzSDKServer",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollection
+",,,"36818944","36818944","False",,,,"6336512","6336512",,
+"Process","RzSDKService","141","52072448","7135232","3088384","17888",,,,,,,,"8",,,,,,"141","1868",".","0","",,,,,"1788
+8","17888","3088384","3088384","63504","63504","3555328","3555328","7327744","7327744","53395456","53395456",,,"3088384
+","3088384",,"RzSDKService",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollec
+tion",,,"52072448","52072448","False",,,,"7135232","7135232",,
+"Process","SearchIndexer","638","378400768","37748736","34463744","69616",,,,,,,,"8",,,,,,"638","4732",".","0","",,,,,"
+69616","69616","34463744","34463744","291520","291520","40280064","40280064","39874560","39874560","385859584","2199409
+115136",,,"34463744","34463744",,"SearchIndexer",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostic
+s.ProcessThreadCollection",,,"378400768","2199401656320","False",,,,"37748736","37748736",,
+"Process","services","276","23175168","7720960","3956736","9408",,,,,,,,"9",,,,,,"276","716",".","0","",,,,,"9408","940
+8","3956736","3956736","105992","105992","4157440","4157440","7794688","7794688","30105600","2199053361152",,,"3956736"
+,"3956736",,"services",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollection"
+,,,"23175168","2199046430720","False",,,,"7720960","7720960",,
+"Process","SettingSyncHost","568","175853568","2899968","8921088","27792","C:\Windows\System32\SettingSyncHost.exe","Mi
+crosoft Corporation","2,109375","6.3.9600.18231 (winblue_ltsb.160208-0600)","6.3.9600.18231","Host Process for Setting
+Synchronization","Microsoft? Windows? Operating System","6",,"False",,"5412","Microsoft.Win32.SafeHandles.SafeProcessHa
+ndle","568","7188",".","0","","System.Diagnostics.ProcessModule (SettingSyncHost.exe)","1413120","204800","System.Diagn
+ostics.ProcessModuleCollection","27792","27792","8921088","8921088","333112","333112","35262464","35262464","37507072",
+"37507072","564858880","2199588114432","True","BelowNormal","8921088","8921088","00:00:01.0781250","SettingSyncHost","2
+55","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:17:01 a. m.",,"System.Diagnostics.ProcessThreadColle
+ction","00:00:02.1093750","00:00:01.0312500","175853568","2199199109120","False",,,,"2899968","2899968",,
+"Process","SkyDrive","359","157614080","15343616","8380416","24208","C:\Windows\System32\skydrive.exe","Microsoft Corpo
+ration","0,1875","6.3.9600.17416 (winblue_r4.141030-1500)","6.3.9600.17416","OneDrive Sync Engine","Microsoft? Windows?
+ Operating System","8",,"False",,"5432","Microsoft.Win32.SafeHandles.SafeProcessHandle","359","4900",".","0","","System
+.Diagnostics.ProcessModule (skydrive.exe)","1413120","204800","System.Diagnostics.ProcessModuleCollection","24208","242
+08","8380416","8380416","289960","289960","8531968","8531968","23605248","23605248","161071104","2199184326656","True",
+"Normal","8380416","8380416","00:00:00.1250000","SkyDrive","255","True","1","System.Diagnostics.ProcessStartInfo","29/0
+2/2020 2:16:30 a. m.",,"System.Diagnostics.ProcessThreadCollection","00:00:00.1875000","00:00:00.0625000","157614080","
+2199180869632","False",,,,"15343616","15343616",,
+"Process","Skype","616","421863424","73060352","37015552","46864","C:\Program Files (x86)\Microsoft\Skype for Desktop\S
+kype.exe","Skype Technologies S.A.","8,0625","8.56.0.103","8.56","Skype","Skype","8",,"False",,"4820","Microsoft.Win32.
+SafeHandles.SafeProcessHandle","616","7412",".","0","","System.Diagnostics.ProcessModule (Skype.exe)","1413120","204800
+","System.Diagnostics.ProcessModuleCollection","46864","46864","37015552","37015552","584168","584168","47566848","4756
+6848","81797120","81797120","455327744","455327744","True","Normal","37015552","37015552","00:00:02.3593750","Skype","2
+55","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:17:03 a. m.",,"System.Diagnostics.ProcessThreadColle
+ction","00:00:08.0625000","00:00:05.7031250","421863424","421863424","False",,,,"73060352","73060352",,
+"Process","Skype","174","277536768","12300288","7929856","16880","C:\Program Files (x86)\Microsoft\Skype for Desktop\Sk
+ype.exe","Skype Technologies S.A.","0,03125","8.56.0.103","8.56","Skype","Skype","8",,"False",,"4012","Microsoft.Win32.
+SafeHandles.SafeProcessHandle","174","7556",".","0","","System.Diagnostics.ProcessModule (Skype.exe)","1413120","204800
+","System.Diagnostics.ProcessModuleCollection","16880","16880","7929856","7929856","409336","409336","8011776","8011776
+","12308480","12308480","278859776","278859776","True","Normal","7929856","7929856","00:00:00.0312500","Skype","255","T
+rue","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:17:05 a. m.",,"System.Diagnostics.ProcessThreadCollection"
+,"00:00:00.0312500","00:00:00","277536768","277536768","False",,,,"12300288","12300288",,
+"Process","Skype","362","443199488","49319936","36892672","33968","C:\Program Files (x86)\Microsoft\Skype for Desktop\S
+kype.exe","Skype Technologies S.A.","17,078125","8.56.0.103","8.56","Skype","Skype","8",,"False",,"3564","Microsoft.Win
+32.SafeHandles.SafeProcessHandle","362","7796",".","0","","System.Diagnostics.ProcessModule (Skype.exe)","1413120","204
+800","System.Diagnostics.ProcessModuleCollection","33968","33968","36892672","36892672","549816","549816","154451968","
+154451968","60882944","60882944","496680960","496680960","True","Normal","36892672","36892672","00:00:07.7812500","Skyp
+e","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:17:05 a. m.",,"System.Diagnostics.ProcessThread
+Collection","00:00:17.0781250","00:00:09.2968750","443199488","443199488","False",,,,"49319936","49319936",,
+"Process","Skype","397","306872320","24563712","11919360","25072","C:\Program Files (x86)\Microsoft\Skype for Desktop\S
+kype.exe","Skype Technologies S.A.","2,25","8.56.0.103","8.56","Skype","Skype","8",,"False",,"5568","Microsoft.Win32.Sa
+feHandles.SafeProcessHandle","397","7808",".","0","","System.Diagnostics.ProcessModule (Skype.exe)","1413120","204800",
+"System.Diagnostics.ProcessModuleCollection","25072","25072","11919360","11919360","465344","465344","12587008","125870
+08","24707072","24707072","321486848","321486848","True","Normal","11919360","11919360","00:00:00.4687500","Skype","255
+","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:17:05 a. m.",,"System.Diagnostics.ProcessThreadCollect
+ion","00:00:02.2500000","00:00:01.7812500","306872320","306872320","False",,,,"24563712","24563712",,
+"Process","Skype","1069","648544256","149000192","128319488","86144","C:\Program Files (x86)\Microsoft\Skype for Deskto
+p\Skype.exe","Skype Technologies S.A.","14,21875","8.56.0.103","8.56","Skype","Skype","8",,"False",,"4200","Microsoft.W
+in32.SafeHandles.SafeProcessHandle","1069","7884",".","0","","System.Diagnostics.ProcessModule (Skype.exe)","193286144"
+,"192077824","System.Diagnostics.ProcessModuleCollection","86144","86144","128319488","128319488","732488","732488","18
+6040320","186040320","197795840","197795840","731410432","731410432","True","Normal","128319488","128319488","00:00:01.
+4062500","Skype","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:17:05 a. m.",,"System.Diagnostics
+.ProcessThreadCollection","00:00:14.2187500","00:00:12.8125000","648544256","648544256","False",,,,"149000192","1490001
+92",,
+"Process","Skype","239","300511232","15974400","8646656","20320","C:\Program Files (x86)\Microsoft\Skype for Desktop\Sk
+ype.exe","Skype Technologies S.A.","0,046875","8.56.0.103","8.56","Skype","Skype","8",,"False",,"4748","Microsoft.Win32
+.SafeHandles.SafeProcessHandle","239","8748",".","0","","System.Diagnostics.ProcessModule (Skype.exe)","1413120","20480
+0","System.Diagnostics.ProcessModuleCollection","20320","20320","8646656","8646656","453160","453160","9158656","915865
+6","16064512","16064512","304480256","304480256","True","Normal","8646656","8646656","00:00:00.0156250","Skype","255","
+True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:17:13 a. m.",,"System.Diagnostics.ProcessThreadCollection
+","00:00:00.0468750","00:00:00.0312500","300511232","300511232","False",,,,"15974400","15974400",,
+"Process","smss","44","4505600","1052672","282624","2480",,,,,,,,"11",,,,,,"44","336",".","0","",,,,,"2480","2480","282
+624","282624","12488","12488","356352","356352","1069056","1069056","26701824","26701824",,,"282624","282624",,"smss",,
+"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollection",,,"4505600","4505600","
+False",,,,"1052672","1052672",,
+"Process","spoolsv","358","48902144","9732096","3469312","20128",,,,,,,,"8",,,,,,"358","1248",".","0","",,,,,"20128","2
+0128","3469312","3469312","109832","109832","4038656","4038656","9867264","9867264","51523584","2199074779136",,,"34693
+12","3469312",,"spoolsv",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollectio
+n",,,"48902144","2199072157696","False",,,,"9732096","9732096",,
+"Process","svchost","997","184721408","92925952","80777216","42304",,,,,,,,"8",,,,,,"997","504",".","0","",,,,,"42304",
+"42304","80777216","80777216","233816","233816","126394368","126394368","140001280","140001280","298299392","2203616522
+240",,,"80777216","80777216",,"svchost",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.Process
+ThreadCollection",,,"184721408","2203502944256","False",,,,"92925952","92925952",,
+"Process","svchost","407","44064768","11640832","4726784","19216",,,,,,,,"8",,,,,,"407","796",".","0","",,,,,"19216","1
+9216","4726784","4726784","218624","218624","5578752","5578752","11833344","11833344","56545280","2199079800832",,,"472
+6784","4726784",,"svchost",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollect
+ion",,,"44064768","2199067320320","False",,,,"11640832","11640832",,
+"Process","svchost","536","28454912","8806400","5120000","15296",,,,,,,,"8",,,,,,"536","832",".","0","",,,,,"15296","15
+296","5120000","5120000","87416","87416","5607424","5607424","8884224","8884224","38952960","2199062208512",,,"5120000"
+,"5120000",,"svchost",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollection",
+,,"28454912","2199051710464","False",,,,"8806400","8806400",,
+"Process","svchost","834","113909760","34217984","26013696","31776",,,,,,,,"8",,,,,,"834","924",".","0","",,,,,"31776",
+"31776","26013696","26013696","169304","169304","29364224","29364224","37781504","37781504","138395648","2199161651200"
+,,,"26013696","26013696",,"svchost",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThre
+adCollection",,,"113909760","2199137165312","False",,,,"34217984","34217984",,
+"Process","svchost","1840","187584512","44576768","27496448","57856",,,,,,,,"8",,,,,,"1840","952",".","0","",,,,,"57856
+","57856","27496448","27496448","394088","394088","187953152","187953152","236621824","236621824","681951232","21997052
+06784",,,"27496448","27496448",,"svchost",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.Proce
+ssThreadCollection",,,"187584512","2199210840064","False",,,,"44576768","44576768",,
+"Process","svchost","859","139206656","21471232","12537856","41904",,,,,,,,"8",,,,,,"859","1008",".","0","",,,,,"41904"
+,"41904","12537856","12537856","274912","274912","14336000","14336000","23416832","23416832","171122688","2199194378240
+",,,"12537856","12537856",,"svchost",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThr
+eadCollection",,,"139206656","2199162462208","False",,,,"21471232","21471232",,
+"Process","svchost","870","1252528128","19484672","9687040","42688",,,,,,,,"8",,,,,,"870","1032",".","0","",,,,,"42688"
+,"42688","9687040","9687040","226440","226440","10403840","10403840","19869696","19869696","1260744704","2200284000256"
+,,,"9687040","9687040",,"svchost",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThread
+Collection",,,"1252528128","2200275783680","False",,,,"19484672","19484672",,
+"Process","svchost","139","38629376","6901760","2199552","10224",,,,,,,,"8",,,,,,"139","1260",".","0","",,,,,"10224","1
+0224","2199552","2199552","74144","74144","2445312","2445312","6946816","6946816","41291776","2199064547328",,,"2199552
+","2199552",,"svchost",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollection"
+,,,"38629376","2199061884928","False",,,,"6901760","6901760",,
+"Process","svchost","500","157581312","24186880","15429632","39632",,,,,,,,"8",,,,,,"500","1292",".","0","",,,,,"39632"
+,"39632","15429632","15429632","183872","183872","174039040","174039040","152834048","152834048","765452288","219978870
+7840",,,"15429632","15429632",,"svchost",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.Proces
+sThreadCollection",,,"157581312","2199180836864","False",,,,"24186880","24186880",,
+"Process","svchost","390","111230976","15355904","6094848","17152",,,,,,,,"8",,,,,,"390","1636",".","0","",,,,,"17152",
+"17152","6094848","6094848","224536","224536","6561792","6561792","15851520","15851520","115097600","2199138353152",,,"
+6094848","6094848",,"svchost",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadColl
+ection",,,"111230976","2199134486528","False",,,,"15355904","15355904",,
+"Process","svchost","456","93843456","15474688","5300224","27872",,,,,,,,"8",,,,,,"456","2400",".","0","",,,,,"27872","
+27872","5300224","5300224","182144","182144","5931008","5931008","16027648","16027648","100278272","2199123533824",,,"5
+300224","5300224",,"svchost",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadColle
+ction",,,"93843456","2199117099008","False",,,,"15474688","15474688",,
+"Process","svchost","405","658214912","12668928","4857856","30912",,,,,,,,"8",,,,,,"405","3380",".","0","",,,,,"30912",
+"30912","4857856","4857856","106408","106408","5165056","5165056","12980224","12980224","663064576","2199686320128",,,"
+4857856","4857856",,"svchost",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadColl
+ection",,,"658214912","2199681470464","False",,,,"12668928","12668928",,
+"Process","System","1133","14090240","557056","10780672","0",,,,,,,,"8",,,,,,"1133","4",".","0","",,,,,"0","0","1078067
+2","10780672","0","0","58023936","58023936","14680064","14680064","61276160","61276160",,,"10780672","10780672",,"Syste
+m",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollection",,,"14090240","14090
+240","False",,,,"557056","557056",,
+"Process","TabTip","286","110231552","10252288","2899968","14832",,,"14,765625",,,,,"13",,,,,,"286","4624",".","0","",,
+,,,"14832","14832","2899968","2899968","236824","236824","2949120","2949120","10264576","10264576","112766976","2199136
+022528",,,"2899968","2899968","00:00:11.8281250","TabTip",,"True","1","System.Diagnostics.ProcessStartInfo","29/02/2020
+ 2:16:29 a. m.",,"System.Diagnostics.ProcessThreadCollection","00:00:14.7656250","00:00:02.9375000","110231552","219913
+3487104","False",,,,"10252288","10252288",,
+"Process","TabTip32","43","74805248","3256320","831488","6128",,,"0",,,,,"8",,,,,,"43","4708",".","0","",,,,,"6128","61
+28","831488","831488","86400","86400","831488","831488","3256320","3256320","76021760","76021760",,,"831488","831488","
+00:00:00","TabTip32",,"True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:16:29 a. m.",,"System.Diagnostics.
+ProcessThreadCollection","00:00:00","00:00:00","74805248","74805248","False",,,,"3256320","3256320",,
+"Process","taskhost","226","1295159296","12816384","10833920","19696",,,,,,,,"6",,,,,,"226","8856",".","0","",,,,,"1969
+6","19696","10833920","10833920","144248","144248","11505664","11505664","44097536","44097536","1384767488","2200408023
+040",,,"10833920","10833920",,"taskhost",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.Proces
+sThreadCollection",,,"1295159296","2200318414848","False",,,,"12816384","12816384",,
+"Process","taskhostex","276","310616064","11177984","4120576","22432","C:\Windows\system32\taskhostex.exe","Microsoft C
+orporation","0,109375","6.3.9600.16384 (winblue_rtm.130821-1623)","6.3.9600.16384","Proceso de host para tareas de Wind
+ows","Sistema operativo Microsoft? Windows?","8",,"False",,"3732","Microsoft.Win32.SafeHandles.SafeProcessHandle","276"
+,"4076",".","0","","System.Diagnostics.ProcessModule (taskhostex.exe)","1413120","204800","System.Diagnostics.ProcessMo
+duleCollection","22432","22432","4120576","4120576","216920","216920","4595712","4595712","11309056","11309056","312389
+632","2199335645184","True","Normal","4120576","4120576","00:00:00.0468750","taskhostex","255","True","1","System.Diagn
+ostics.ProcessStartInfo","29/02/2020 2:16:28 a. m.",,"System.Diagnostics.ProcessThreadCollection","00:00:00.1093750","0
+0:00:00.0625000","310616064","2199333871616","False",,,,"11177984","11177984",,
+"Process","UnrealCEFSubProcess","298","466370560","24956928","64229376","26320","C:\Program Files (x86)\Epic Games\Laun
+cher\Engine\Binaries\Win64\UnrealCEFSubProcess.exe","","0,140625","","","","","8",,"False",,"4112","Microsoft.Win32.Saf
+eHandles.SafeProcessHandle","298","5784",".","0","","System.Diagnostics.ProcessModule (UnrealCEFSubProcess.exe)","14131
+20","204800","System.Diagnostics.ProcessModuleCollection","26320","26320","64229376","64229376","608600","608600","1978
+49088","197849088","56074240","56074240","596209664","596209664","True","Normal","64229376","64229376","00:00:00.125000
+0","UnrealCEFSubProcess","255","True","1","System.Diagnostics.ProcessStartInfo","29/02/2020 2:16:44 a. m.",,"System.Dia
+gnostics.ProcessThreadCollection","00:00:00.1406250","00:00:00.0156250","466370560","466370560","False",,,,"24956928","
+24956928",,
+"Process","wininit","77","42110976","4182016","864256","7920",,,,,,,,"13",,,,,,"77","604",".","0","",,,,,"7920","7920",
+"864256","864256","97208","97208","1097728","1097728","4214784","4214784","45756416","2199069011968",,,"864256","864256
+",,"wininit",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollection",,,"421109
+76","2199065366528","False",,,,"4182016","4182016",,
+"Process","winlogon","169","61997056","5742592","1880064","9312",,,,,,,,"13",,,,,,"169","664",".","0","",,,,,"9312","93
+12","1880064","1880064","121712","121712","7217152","7217152","15421440","15421440","84475904","2199107731456",,,"18800
+64","1880064",,"winlogon",,"True","1","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollecti
+on",,,"61997056","2199085252608","False",,,,"5742592","5742592",,
+"Process","WmiPrvSE","132","36773888","7008256","2875392","9456",,,,,,,,"8",,,,,,"132","5868",".","0","",,,,,"9456","94
+56","2875392","2875392","65384","65384","3121152","3121152","7352320","7352320","36937728","2199060193280",,,"2875392",
+"2875392",,"WmiPrvSE",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCollection",
+,,"36773888","2199060029440","False",,,,"7008256","7008256",,
+"Process","wmpnetwk","392","105951232","19566592","6152192","25728",,,,,,,,"8",,,,,,"392","9192",".","0","",,,,,"25728"
+,"25728","6152192","6152192","205352","205352","6201344","6201344","19763200","19763200","106508288","2199129763840",,,
+"6152192","6152192",,"wmpnetwk",,"True","0","System.Diagnostics.ProcessStartInfo",,,"System.Diagnostics.ProcessThreadCo
+llection",,,"105951232","2199129206784","False",,,,"19566592","19566592",,
+
+PS C:\Users\santiago> help random
+
+NOMBRE
+    Get-Random
+
+SINTAXIS
+    Get-Random [[-Maximum] <Object>] [-SetSeed <int>] [-Minimum <Object>]  [<CommonParameters>]
+
+    Get-Random [-InputObject] <Object[]> [-SetSeed <int>] [-Count <int>]  [<CommonParameters>]
+
+
+ALIAS
+    Ninguno
+
+
+NOTAS
+    Get-Help no encuentra los archivos de Ayuda para este cmdlet en el equipo. Mostrará solo una parte de la Ayuda.
+        -- Para descargar e instalar los archivos de Ayuda para el módulo que incluye este cmdlet, use Update-Help.
+        -- Para ver en línea el tema de Ayuda de este cmdlet, escriba "Get-Help Get-Random -Online" o
+           vaya a http://go.microsoft.com/fwlink/?LinkID=113446.
+
+PS C:\Users\santiago> get-random 50
+49
+
+PS C:\Users\santiago> help date
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+Update-Help                       Cmdlet    Microsoft.PowerShell.Core ...
+Get-Date                          Cmdlet    Microsoft.PowerShell.U... ...
+Set-Date                          Cmdlet    Microsoft.PowerShell.U... ...
+Update-FormatData                 Cmdlet    Microsoft.PowerShell.U... ...
+Update-List                       Cmdlet    Microsoft.PowerShell.U... ...
+Update-TypeData                   Cmdlet    Microsoft.PowerShell.U... ...
+Update-MpSignature                Function  Defender                  ...
+Update-WIMBootEntry               Cmdlet    Dism                      Update-WIMBootEntry...
+Update-IscsiTargetPortal          Function  iSCSI                     ...
+Update-IscsiTarget                Function  iSCSI                     ...
+Update-NetIPsecRule               Function  NetSecurity               ...
+Update-DscConfiguration           Cmdlet    PSDesiredStateConfigur... Update-DscConfiguration...
+Update-SmbMultichannelConnection  Function  SmbShare                  ...
+Update-Disk                       Function  Storage                   ...
+Update-HostStorageCache           Function  Storage                   ...
+Update-StoragePool                Function  Storage                   ...
+Update-StorageProviderCache       Function  Storage                   ...
+
+PS C:\Users\santiago> get-date
+
+sábado, 29 de febrero de 2020 3:06:18 a. m.
+
+
+
+PS C:\Users\santiago> (get-date).gettype()
+
+IsPublic IsSerial Name                                     BaseType
+-------- -------- ----                                     --------
+True     True     DateTime                                 System.ValueType
+
+
+
+PS C:\Users\santiago> get-date | select-object -property "dayofweek"
+
+                                                                                                              DayOfWeek
+                                                                                                              ---------
+                                                                                                               Saturday
+
+
+
+PS C:\Users\santiago> get-date | select-object -property "DayOfWeek"
+
+                                                                                                              DayOfWeek
+                                                                                                              ---------
+                                                                                                               Saturday
+
+
+
+PS C:\Users\santiago> get-date | select-object -Property "DayOfWeek"
+
+                                                                                                              DayOfWeek
+                                                                                                              ---------
+                                                                                                               Saturday
+
+
+
+PS C:\Users\santiago> help hotfix
+
+NOMBRE
+    Get-HotFix
+
+SINTAXIS
+    Get-HotFix [[-Id] <string[]>] [-ComputerName <string[]>] [-Credential <pscredential>]  [<CommonParameters>]
+
+    Get-HotFix [-Description <string[]>] [-ComputerName <string[]>] [-Credential <pscredential>]  [<CommonParameters>]
+
+
+ALIAS
+    Ninguno
+
+
+NOTAS
+    Get-Help no encuentra los archivos de Ayuda para este cmdlet en el equipo. Mostrará solo una parte de la Ayuda.
+        -- Para descargar e instalar los archivos de Ayuda para el módulo que incluye este cmdlet, use Update-Help.
+        -- Para ver en línea el tema de Ayuda de este cmdlet, escriba "Get-Help Get-HotFix -Online" o
+           vaya a http://go.microsoft.com/fwlink/?LinkID=135217.
+
+PS C:\Users\santiago> get-hotfix
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+PC-SANTIAGO   Update           KB2899189_... NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB2959936     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2894852     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB2894856     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB2919355     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2920189     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2931358     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2931366     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2937220     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2938772     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2939153     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Hotfix           KB2949621     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2954879     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2958262     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2958263     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2961072     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2962140     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2965142     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2965500     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2966826     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB2966828     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB2967917     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2968296     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB2968599     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2971203     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2972103     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB2972213     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB2973114     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB2975061     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2976627     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2976978     NT AUTHORITY\SYSTEM  07/12/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB2977629     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2978002     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2978122     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB2981580     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2987107     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2989647     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB2989930     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB2990967     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB2994290     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB2998527     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB3000850     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB3001237     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB3003057     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB3003667     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3008242     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3012235     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3012702     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3013172     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3013531     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3013538     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3013791     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3014442     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB3015696     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3018133     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3019978     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3020370     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3023219     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3024751     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3024755     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3029606     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3030947     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3031044     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3033446     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3035126     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3036612     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3037576     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3038002     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3042085     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3043812     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3044374     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3044673     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3045634     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3045685     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3045717     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3045719     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3045755     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3045999     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3046017     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3046480     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Hotfix           KB3046737     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3047254     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3053863     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3054169     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3054256     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3054464     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3055323     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3055343     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3055642     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3056347     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3059317     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3060793     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3061493     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3061512     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3062760     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3063843     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3064059     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3071756     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3072307     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3074545     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3076949     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3077715     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3078405     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3078676     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3080149     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3080800     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3082089     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3084135     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3086255     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3087137     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3091297     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3095701     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3097992     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3099834     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3100473     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3103616     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3103696     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3103709     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3109103     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3109560     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3109976     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3110329     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3115224     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3121261     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3122651     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3126030     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3126434     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3126587     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3127222     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3133690     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3134815     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3137728     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3138378     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3138602     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3138910     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3138962     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3139398     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3139914     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3140185     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3140219     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3140222     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3140234     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3145384     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3146604     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3146723     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3146751     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3147071     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3150513     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3155784     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3156059     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3159398     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3161102     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3161949     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3172614     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3172729     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3173424     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3175024     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3178539     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3179574     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3184143     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3185319     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3187754     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4033369     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4040981     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4054566     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4054574     NT AUTHORITY\SYSTEM  09/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4054854     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB4093110     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4095875     NT AUTHORITY\SYSTEM  07/04/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4096417     NT AUTHORITY\SYSTEM  07/04/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB4103729     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB4287903     NT AUTHORITY\SYSTEM  07/10/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4338419     NT AUTHORITY\SYSTEM  07/12/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4338424     NT AUTHORITY\SYSTEM  07/12/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB4338832     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB4343902     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4344145     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4344153     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4457009     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4457015     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4457034     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4457045     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB4457146     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4462930     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4470630     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4470639     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB4471331     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB4483187     NT AUTHORITY\SYSTEM  03/02/2019 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4483450     NT AUTHORITY\SYSTEM  03/02/2019 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4483459     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4486105     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4486113     NT AUTHORITY\SYSTEM  12/02/2019 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB4487038     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB4489907     NT AUTHORITY\SYSTEM  04/12/2019 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB4493478     NT AUTHORITY\SYSTEM  05/03/2019 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4495585     NT AUTHORITY\SYSTEM  07/08/2019 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4495608     NT AUTHORITY\SYSTEM  07/08/2019 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB4497932     NT AUTHORITY\SYSTEM  07/08/2019 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB4503308     NT AUTHORITY\SYSTEM  07/08/2019 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB4504418     NT AUTHORITY\SYSTEM  08/03/2019 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4506996     NT AUTHORITY\SYSTEM  08/03/2019 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4507005     NT AUTHORITY\SYSTEM  08/01/2019 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4514371     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4515846     NT AUTHORITY\SYSTEM  12/02/2019 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4515853     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB4516115     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB4521864     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB4524445     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4532940     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4532946     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB4533004     NT AUTHORITY\SYSTEM  02/01/2020 12:00:00 a. m.
+PC-SANTIAGO   Update           KB4534134     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB4537759     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB4537821     NT AUTHORITY\SYSTEM
+
+
+
+PS C:\Users\santiago> get-hotfix |select-object -property installedon,installedby,hotfixid
+
+InstalledOn                             installedby                             hotfixid
+-----------                             -----------                             --------
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB2899189_Microsoft-Windows-CameraCo...
+                                        PC-SANTIAGO\Administrador               KB2959936
+                                        NT AUTHORITY\SYSTEM                     KB2894852
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB2894856
+                                        PC-SANTIAGO\Administrador               KB2919355
+                                        PC-SANTIAGO\Administrador               KB2920189
+                                        PC-SANTIAGO\Administrador               KB2931358
+                                        PC-SANTIAGO\Administrador               KB2931366
+                                        PC-SANTIAGO\Administrador               KB2937220
+                                        PC-SANTIAGO\Administrador               KB2938772
+                                        PC-SANTIAGO\Administrador               KB2939153
+                                        PC-SANTIAGO\Administrador               KB2949621
+                                        PC-SANTIAGO\Administrador               KB2954879
+                                        PC-SANTIAGO\Administrador               KB2958262
+                                        PC-SANTIAGO\Administrador               KB2958263
+                                        PC-SANTIAGO\Administrador               KB2961072
+                                        PC-SANTIAGO\Administrador               KB2962140
+                                        PC-SANTIAGO\Administrador               KB2965142
+                                        PC-SANTIAGO\Administrador               KB2965500
+                                        NT AUTHORITY\SYSTEM                     KB2966826
+                                        NT AUTHORITY\SYSTEM                     KB2966828
+                                        PC-SANTIAGO\Administrador               KB2967917
+                                        NT AUTHORITY\SYSTEM                     KB2968296
+                                        PC-SANTIAGO\Administrador               KB2968599
+                                        PC-SANTIAGO\Administrador               KB2971203
+                                        NT AUTHORITY\SYSTEM                     KB2972103
+                                        NT AUTHORITY\SYSTEM                     KB2972213
+                                        NT AUTHORITY\SYSTEM                     KB2973114
+                                        PC-SANTIAGO\Administrador               KB2975061
+                                        PC-SANTIAGO\Administrador               KB2976627
+07/12/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB2976978
+                                        PC-SANTIAGO\Administrador               KB2977629
+                                        PC-SANTIAGO\Administrador               KB2978002
+                                        NT AUTHORITY\SYSTEM                     KB2978122
+                                        PC-SANTIAGO\Administrador               KB2981580
+                                        PC-SANTIAGO\Administrador               KB2987107
+                                        NT AUTHORITY\SYSTEM                     KB2989647
+                                        NT AUTHORITY\SYSTEM                     KB2989930
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB2990967
+                                        NT AUTHORITY\SYSTEM                     KB2994290
+                                        PC-SANTIAGO\Administrador               KB2998527
+                                        PC-SANTIAGO\Administrador               KB3000850
+                                        PC-SANTIAGO\Administrador               KB3001237
+                                        PC-SANTIAGO\Administrador               KB3003057
+                                        NT AUTHORITY\SYSTEM                     KB3003667
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3008242
+                                        NT AUTHORITY\SYSTEM                     KB3012235
+                                        NT AUTHORITY\SYSTEM                     KB3012702
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3013172
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3013531
+                                        NT AUTHORITY\SYSTEM                     KB3013538
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3013791
+                                        PC-SANTIAGO\Administrador               KB3014442
+                                        NT AUTHORITY\SYSTEM                     KB3015696
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3018133
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3019978
+                                        NT AUTHORITY\SYSTEM                     KB3020370
+                                        NT AUTHORITY\SYSTEM                     KB3023219
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3024751
+                                        NT AUTHORITY\SYSTEM                     KB3024755
+                                        NT AUTHORITY\SYSTEM                     KB3029606
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3030947
+                                        NT AUTHORITY\SYSTEM                     KB3031044
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3033446
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3035126
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3036612
+                                        NT AUTHORITY\SYSTEM                     KB3037576
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3038002
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3042085
+                                        NT AUTHORITY\SYSTEM                     KB3043812
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3044374
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3044673
+                                        NT AUTHORITY\SYSTEM                     KB3045634
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3045685
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3045717
+                                        NT AUTHORITY\SYSTEM                     KB3045719
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3045755
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3045999
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3046017
+                                        NT AUTHORITY\SYSTEM                     KB3046480
+                                        NT AUTHORITY\SYSTEM                     KB3046737
+                                        NT AUTHORITY\SYSTEM                     KB3047254
+                                        NT AUTHORITY\SYSTEM                     KB3053863
+                                        NT AUTHORITY\SYSTEM                     KB3054169
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3054256
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3054464
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3055323
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3055343
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3055642
+                                        NT AUTHORITY\SYSTEM                     KB3056347
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3059317
+                                        NT AUTHORITY\SYSTEM                     KB3060793
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3061493
+                                        NT AUTHORITY\SYSTEM                     KB3061512
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3062760
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3063843
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3064059
+                                        NT AUTHORITY\SYSTEM                     KB3071756
+                                        NT AUTHORITY\SYSTEM                     KB3072307
+                                        NT AUTHORITY\SYSTEM                     KB3074545
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3076949
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3077715
+                                        NT AUTHORITY\SYSTEM                     KB3078405
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3078676
+                                        NT AUTHORITY\SYSTEM                     KB3080149
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3080800
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3082089
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3084135
+                                        NT AUTHORITY\SYSTEM                     KB3086255
+                                        NT AUTHORITY\SYSTEM                     KB3087137
+                                        NT AUTHORITY\SYSTEM                     KB3091297
+                                        NT AUTHORITY\SYSTEM                     KB3095701
+                                        NT AUTHORITY\SYSTEM                     KB3097992
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3099834
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3100473
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3103616
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3103696
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3103709
+                                        NT AUTHORITY\SYSTEM                     KB3109103
+                                        NT AUTHORITY\SYSTEM                     KB3109560
+                                        NT AUTHORITY\SYSTEM                     KB3109976
+                                        NT AUTHORITY\SYSTEM                     KB3110329
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3115224
+                                        NT AUTHORITY\SYSTEM                     KB3121261
+                                        NT AUTHORITY\SYSTEM                     KB3122651
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3126030
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3126434
+                                        NT AUTHORITY\SYSTEM                     KB3126587
+                                        NT AUTHORITY\SYSTEM                     KB3127222
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3133690
+                                        NT AUTHORITY\SYSTEM                     KB3134815
+                                        NT AUTHORITY\SYSTEM                     KB3137728
+                                        NT AUTHORITY\SYSTEM                     KB3138378
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3138602
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3138910
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3138962
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3139398
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3139914
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3140185
+                                        NT AUTHORITY\SYSTEM                     KB3140219
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3140222
+                                        NT AUTHORITY\SYSTEM                     KB3140234
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3145384
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3146604
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3146723
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3146751
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3147071
+                                        NT AUTHORITY\SYSTEM                     KB3150513
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3155784
+                                        NT AUTHORITY\SYSTEM                     KB3156059
+                                        NT AUTHORITY\SYSTEM                     KB3159398
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3161102
+                                        NT AUTHORITY\SYSTEM                     KB3161949
+                                        NT AUTHORITY\SYSTEM                     KB3172614
+                                        NT AUTHORITY\SYSTEM                     KB3172729
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3173424
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3175024
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3178539
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3179574
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3184143
+                                        NT AUTHORITY\SYSTEM                     KB3185319
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB3187754
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4033369
+                                        NT AUTHORITY\SYSTEM                     KB4040981
+                                        NT AUTHORITY\SYSTEM                     KB4054566
+09/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4054574
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4054854
+05/03/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4093110
+07/04/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4095875
+07/04/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4096417
+                                        NT AUTHORITY\SYSTEM                     KB4103729
+07/10/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4287903
+07/12/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4338419
+07/12/2018 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4338424
+                                        NT AUTHORITY\SYSTEM                     KB4338832
+                                        NT AUTHORITY\SYSTEM                     KB4343902
+                                        NT AUTHORITY\SYSTEM                     KB4344145
+                                        NT AUTHORITY\SYSTEM                     KB4344153
+                                        NT AUTHORITY\SYSTEM                     KB4457009
+                                        NT AUTHORITY\SYSTEM                     KB4457015
+                                        NT AUTHORITY\SYSTEM                     KB4457034
+                                        NT AUTHORITY\SYSTEM                     KB4457045
+                                        NT AUTHORITY\SYSTEM                     KB4457146
+                                        NT AUTHORITY\SYSTEM                     KB4462930
+                                        NT AUTHORITY\SYSTEM                     KB4470630
+                                        NT AUTHORITY\SYSTEM                     KB4470639
+                                        NT AUTHORITY\SYSTEM                     KB4471331
+03/02/2019 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4483187
+03/02/2019 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4483450
+                                        NT AUTHORITY\SYSTEM                     KB4483459
+                                        NT AUTHORITY\SYSTEM                     KB4486105
+12/02/2019 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4486113
+                                        NT AUTHORITY\SYSTEM                     KB4487038
+04/12/2019 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4489907
+05/03/2019 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4493478
+07/08/2019 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4495585
+07/08/2019 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4495608
+07/08/2019 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4497932
+07/08/2019 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4503308
+08/03/2019 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4504418
+08/03/2019 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4506996
+08/01/2019 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4507005
+                                        NT AUTHORITY\SYSTEM                     KB4514371
+12/02/2019 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4515846
+                                        NT AUTHORITY\SYSTEM                     KB4515853
+                                        NT AUTHORITY\SYSTEM                     KB4516115
+                                        NT AUTHORITY\SYSTEM                     KB4521864
+                                        NT AUTHORITY\SYSTEM                     KB4524445
+                                        NT AUTHORITY\SYSTEM                     KB4532940
+                                        NT AUTHORITY\SYSTEM                     KB4532946
+02/01/2020 12:00:00 a. m.               NT AUTHORITY\SYSTEM                     KB4533004
+                                        NT AUTHORITY\SYSTEM                     KB4534134
+                                        NT AUTHORITY\SYSTEM                     KB4537759
+                                        NT AUTHORITY\SYSTEM                     KB4537821
+
+
+
+PS C:\Users\santiago> get-hotfix |select-object -property installedon,installedby,hotfixid,description | sort-object -property description | convertto-html|outfile uno.html
+outfile : El término 'outfile' no se reconoce como nombre de un cmdlet, función, archivo de script o programa
+ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta
+es correcta e inténtelo de nuevo.
+En línea: 1 Carácter: 135
++ ... convertto-html|outfile uno.html
++                    ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (outfile:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+PS C:\Users\santiago> get-hotfix |select-object -property installedon,installedby,hotfixid,description | sort-object -property description | convertto-html|out-file uno.html
+
+PS C:\Users\santiago> get-eventlog -logname system -newest 50 | sort -object -property timewritten,index | select -object -property index,timewritten,source
+>> ErrorTerminación(Sort-Object): "No se encuentra ningún parámetro que coincida con el nombre del parámetro 'object'."
+Sort-Object : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'object'.
+En línea: 1 Carácter: 48
++ get-eventlog -logname system -newest 50 | sort -object -property timewritten,ind ...
++                                                ~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Sort-Object], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.SortObjectCommand
+
+
+PS C:\Users\santiago> get-eventlog -logname system -newest 50 | sort-object -property timewritten,index | select -object -property index,timewritten,source
+>> ErrorTerminación(Select-Object): "No se encuentra ningún parámetro que coincida con el nombre del parámetro 'object'."
+Select-Object : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'object'.
+En línea: 1 Carácter: 92
++ ... index | select -object -property index,timewritten,source
++                    ~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Select-Object], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.SelectObjectCommand
+
+
+PS C:\Users\santiago> get-eventlog -logname system -newest 50 | sort-object -property timewritten,index | select-object -property index,timewritten,source
+
+                                  Index TimeWritten                             Source
+                                  ----- -----------                             ------
+                                  11971 29/02/2020 2:15:25 a. m.                Microsoft-Windows-Kernel-Boot
+                                  11972 29/02/2020 2:15:26 a. m.                Microsoft-Windows-FilterManager
+                                  11973 29/02/2020 2:15:26 a. m.                Microsoft-Windows-FilterManager
+                                  11974 29/02/2020 2:15:26 a. m.                Microsoft-Windows-FilterManager
+                                  11975 29/02/2020 2:15:26 a. m.                Microsoft-Windows-Ntfs
+                                  11976 29/02/2020 2:15:27 a. m.                Microsoft-Windows-FilterManager
+                                  11977 29/02/2020 2:15:28 a. m.                Microsoft-Windows-Ntfs
+                                  11978 29/02/2020 2:15:28 a. m.                Microsoft-Windows-Ntfs
+                                  11979 29/02/2020 2:15:29 a. m.                MEIx64
+                                  11980 29/02/2020 2:15:29 a. m.                Microsoft-Windows-Ntfs
+                                  11981 29/02/2020 2:15:29 a. m.                Microsoft-Windows-Kernel-Processor-P...
+                                  11982 29/02/2020 2:15:29 a. m.                Microsoft-Windows-Kernel-Processor-P...
+                                  11983 29/02/2020 2:15:29 a. m.                Microsoft-Windows-Kernel-Processor-P...
+                                  11984 29/02/2020 2:15:29 a. m.                Microsoft-Windows-Kernel-Processor-P...
+                                  11985 29/02/2020 2:15:29 a. m.                Microsoft-Windows-Kernel-Processor-P...
+                                  11986 29/02/2020 2:15:29 a. m.                Microsoft-Windows-Kernel-Processor-P...
+                                  11987 29/02/2020 2:15:29 a. m.                Microsoft-Windows-Kernel-Processor-P...
+                                  11988 29/02/2020 2:15:29 a. m.                Microsoft-Windows-Kernel-Processor-P...
+                                  11989 29/02/2020 2:15:29 a. m.                Microsoft-Windows-Ntfs
+                                  11990 29/02/2020 2:15:31 a. m.                BTHUSB
+                                  11991 29/02/2020 2:15:45 a. m.                Win32k
+                                  11992 29/02/2020 2:15:45 a. m.                Win32k
+                                  11993 29/02/2020 2:15:45 a. m.                Microsoft-Windows-Directory-Services...
+                                  11994 29/02/2020 2:15:45 a. m.                Microsoft-Windows-FilterManager
+                                  11995 29/02/2020 2:15:45 a. m.                Microsoft-Windows-Dhcp-Client
+                                  11996 29/02/2020 2:15:45 a. m.                Microsoft-Windows-DHCPv6-Client
+                                  11997 29/02/2020 2:15:46 a. m.                Microsoft-Windows-WLAN-AutoConfig
+                                  11998 29/02/2020 2:15:46 a. m.                Microsoft-Windows-WLAN-AutoConfig
+                                  11999 29/02/2020 2:15:55 a. m.                Microsoft-Windows-Wininit
+                                  12000 29/02/2020 2:16:10 a. m.                Service Control Manager
+                                  12001 29/02/2020 2:16:11 a. m.                Microsoft-Windows-UserModePowerService
+                                  12002 29/02/2020 2:16:11 a. m.                Microsoft-Windows-UserModePowerService
+                                  12003 29/02/2020 2:16:12 a. m.                Microsoft-Windows-UserModePowerService
+                                  12004 29/02/2020 2:16:13 a. m.                Microsoft-Windows-UserModePowerService
+                                  12005 29/02/2020 2:16:13 a. m.                Service Control Manager
+                                  12006 29/02/2020 2:16:28 a. m.                Microsoft-Windows-Winlogon
+                                  12007 29/02/2020 2:16:37 a. m.                Microsoft-Windows-UserModePowerService
+                                  12008 29/02/2020 2:16:37 a. m.                Microsoft-Windows-DriverFrameworks-U...
+                                  12009 29/02/2020 2:16:37 a. m.                Microsoft-Windows-Kernel-PnP
+                                  12010 29/02/2020 2:17:36 a. m.                Microsoft-Windows-WindowsUpdateClient
+                                  12011 29/02/2020 2:17:36 a. m.                Microsoft-Windows-WindowsUpdateClient
+                                  12012 29/02/2020 2:17:36 a. m.                Microsoft-Windows-WindowsUpdateClient
+                                  12013 29/02/2020 2:18:11 a. m.                WMPNetworkSvc
+                                  12014 29/02/2020 2:18:12 a. m.                WMPNetworkSvc
+                                  12015 29/02/2020 2:21:16 a. m.                Microsoft-Windows-WindowsUpdateClient
+                                  12016 29/02/2020 2:21:35 a. m.                Microsoft-Windows-WindowsUpdateClient
+                                  12017 29/02/2020 2:21:35 a. m.                Microsoft-Windows-WindowsUpdateClient
+                                  12018 29/02/2020 2:21:44 a. m.                Microsoft-Windows-WindowsUpdateClient
+                                  12019 29/02/2020 2:28:44 a. m.                Microsoft-Windows-UserModePowerService
+                                  12020 29/02/2020 3:22:05 a. m.                Service Control Manager
+
+
+
+PS C:\Users\santiago> stop-transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200229032544
+**********************

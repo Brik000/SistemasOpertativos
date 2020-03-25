@@ -4,13 +4,13 @@ import mundo.OficinaMonitor;
 
 public class Monitor extends Thread{
 	/**
-	 * This attribute contains a reference to the actual Office the monitor is attending.
+	 * es la referencia a la oficin a ala cual este mintor atiende
 	 */
 	private OficinaMonitor oficina;
 	
 	/**
-	 * Constructor method for the monitor.
-	 * @param of parameter that indicates the actual office the monitor is working on.
+	 * constructor de monitor, le da vida a un nuevo monitos 
+	 * @param indica a que oficina se asigna el monitor
 	 */
 	public Monitor(OficinaMonitor of) {
 		oficina = of;
@@ -18,7 +18,8 @@ public class Monitor extends Thread{
 	
 
 	/**
-	 * Run method.
+	 * este metodo represetna como el monitor simpre tiene disposicion para ayudar a os estudiantes que tengan dudas
+	 * si nadie tiene dudas el monitor se duerme un rato hasta que alguientenga dudas
 	 */
 	public void run() {
 		// TODO Auto-generated method stub

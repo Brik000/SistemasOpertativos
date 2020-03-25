@@ -1,0 +1,1065 @@
+﻿##Santiago del Campo A00137608
+
+**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200324222130
+Nombre de usuario: PC-SANTIAGO\santiago
+Usuario RunAs: PC-SANTIAGO\santiago
+Máquina: PC-SANTIAGO (Microsoft Windows NT 6.3.9600.0)
+Aplicación host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Id. de proceso: 6260
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\santiago\Documents\PowerShell_transcript.PC-SANTIAGO.Fa
+GT4ht5.20200324222130.txt
+
+
+1)
+
+
+PS C:\Users\santiago> Get-Process | select name,id,responding | ft -Wrap
+
+Name                                                                         Id                              Responding
+----                                                                         --                              ----------
+audiodg                                                                    1420                                    True
+Bluetooth Headset Helper                                                   9536                                    True
+BTStackServer                                                              6804                                    True
+BTTray                                                                     1372                                    True
+btwdins                                                                    1572                                    True
+BtwRSupportService                                                         1536                                    True
+CefSharp.BrowserSubprocess                                                 6304                                    True
+CefSharp.BrowserSubprocess                                                 8892                                    True
+chrome                                                                     1496                                    True
+chrome                                                                     2984                                    True
+chrome                                                                     4356                                    True
+chrome                                                                     4432                                    True
+chrome                                                                     5700                                    True
+chrome                                                                     6524                                    True
+chrome                                                                     7296                                    True
+chrome                                                                     7856                                    True
+chrome                                                                     8224                                    True
+chrome                                                                     8700                                    True
+chrome                                                                     9628                                    True
+chrome                                                                     9852                                    True
+chrome                                                                     9860                                    True
+chrome                                                                    10136                                    True
+conhost                                                                    5640                                    True
+csrss                                                                       540                                    True
+csrss                                                                      7164                                    True
+daemonu                                                                    3516                                    True
+dasHost                                                                    1684                                    True
+dllhost                                                                    4720                                    True
+dwm                                                                        5592                                    True
+EpicGamesLauncher                                                          4388                                    True
+explorer                                                                    228                                    True
+GameManagerService                                                         1924                                    True
+IAStorDataMgrSvc                                                           3488                                    True
+IAStorIcon                                                                 7260                                    True
+Idle                                                                          0                                    True
+igfxCUIService                                                              608                                    True
+igfxEM                                                                     9128                                    True
+igfxHK                                                                     9088                                    True
+igfxTray                                                                   5824                                    True
+jusched                                                                     672                                    True
+lsass                                                                       720                                    True
+McCHSvc                                                                    1148                                    True
+McCSPServiceHost                                                           3744                                    True
+mDNSResponder                                                              1556                                    True
+MpCmdRun                                                                  11204                                    True
+MsMpEng                                                                    1836                                    True
+NisSrv                                                                     2524                                    True
+NVDisplay.Container                                                        1744                                    True
+nvxdsync                                                                   8620                                    True
+OfficeC2RClient                                                            8692                                    True
+OfficeClickToRun                                                           1600                                    True
+pcee4                                                                      6624                                    True
+powershell                                                                 6260                                    True
+PresentationFontCache                                                      3256                                    True
+RAVBg64                                                                    4428                                    True
+RAVCpl64                                                                   5564                                    True
+Razer Central                                                               128                                    True
+Razer Synapse 3                                                            8512                                    True
+Razer Synapse Service                                                      2816                                    True
+Razer Synapse Service Process                                             10152                                    True
+RazerCentralService                                                        2028                                    True
+RIconMan                                                                   1704                                    True
+rundll32                                                                   5176                                    True
+RuntimeBroker                                                              4884                                    True
+RzSDKServer                                                                1804                                    True
+RzSDKService                                                               1864                                    True
+SearchFilterHost                                                           6576                                    True
+SearchIndexer                                                              4992                                    True
+SearchProtocolHost                                                         8236                                    True
+services                                                                    712                                    True
+SettingSyncHost                                                           10356                                    True
+SkyDrive                                                                   9644                                    True
+Skype                                                                      3876                                    True
+Skype                                                                      5388                                    True
+Skype                                                                      6776                                    True
+Skype                                                                      7100                                    True
+Skype                                                                      8616                                    True
+Skype                                                                      9932                                    True
+smss                                                                        336                                    True
+spoolsv                                                                    1328                                    True
+SSScheduler                                                                8852                                    True
+svchost                                                                     104                                    True
+svchost                                                                     752                                    True
+svchost                                                                     792                                    True
+svchost                                                                     824                                    True
+svchost                                                                     920                                    True
+svchost                                                                     964                                    True
+svchost                                                                    1140                                    True
+svchost                                                                    1364                                    True
+svchost                                                                    1656                                    True
+svchost                                                                    1664                                    True
+svchost                                                                    3088                                    True
+svchost                                                                    3564                                    True
+svchost                                                                    7864                                    True
+System                                                                        4                                    True
+TabTip                                                                     8240                                    True
+TabTip32                                                                   5080                                    True
+taskeng                                                                   10612                                    True
+taskhost                                                                   4108                                    True
+taskhost                                                                   5352                                    True
+taskhostex                                                                 7232                                    True
+UnrealCEFSubProcess                                                        6592                                    True
+wininit                                                                     600                                    True
+winlogon                                                                   1680                                    True
+WmiApSrv                                                                   8812                                    True
+WmiPrvSE                                                                   2432                                    True
+WmiPrvSE                                                                   7896                                    True
+wmpnetwk                                                                   7292                                    True
+WUDFHost                                                                   4252                                    True
+
+
+2)
+
+
+PS C:\Users\santiago> Get-Process | ft -Property name, id, @{n='VM (MB)'; e={$_.VM / 1MB -as [int]}}, @{n='PM (MB)' ; e={$_.PM / 1MB -as [int]}}
+
+Name                                                     Id                       VM (MB)                       PM (MB)
+----                                                     --                       -------                       -------
+Bluetooth Headset Helper                               9536                            57                             1
+BTStackServer                                          6804                           131                             8
+BTTray                                                 1372                           113                             5
+btwdins                                                1572                            62                             2
+BtwRSupportService                                     1536                            61                             2
+CefSharp.BrowserSubprocess                             6304                           425                            36
+CefSharp.BrowserSubprocess                             8892                           440                            67
+chrome                                                 1496                           480                            74
+chrome                                                 2984                           332                            18
+chrome                                                 4356                           340                            17
+chrome                                                 4432                            92                             1
+chrome                                                 5700                           492                            58
+chrome                                                 7856                           464                            68
+chrome                                                 8224                           318                            12
+chrome                                                 8700                           789                           118
+chrome                                                 9628                           494                            65
+chrome                                                 9852                           105                             1
+chrome                                                 9860                           630                            78
+chrome                                                10136                           417                           133
+conhost                                                5640                            85                             2
+csrss                                                   540                            48                             2
+csrss                                                  7164                            74                             2
+daemonu                                                3516                            71                             4
+dasHost                                                1684                            89                             9
+dllhost                                                4720                            55                             2
+dwm                                                    5592                           175                            17
+EpicGamesLauncher                                      4388                           612                           138
+explorer                                                228                           566                            58
+GameManagerService                                     1924                           364                            69
+IAStorDataMgrSvc                                       3488                           269                            37
+IAStorIcon                                             7260                           257                            22
+Idle                                                      0                             0                             0
+igfxCUIService                                          608                            51                             2
+igfxEM                                                 9128                           102                             3
+igfxHK                                                 9088                            66                             2
+igfxTray                                               5824                            95                             3
+jucheck                                               10300                           106                             3
+jusched                                                 672                            96                             2
+lsass                                                   720                            54                             9
+McCHSvc                                                1148                           137                            23
+McCSPServiceHost                                       3744                            91                             7
+mDNSResponder                                          1556                            29                             2
+MpCmdRun                                              11204                            44                             3
+MsMpEng                                                1836                           786                           541
+NisSrv                                                 2524                            65                            17
+NVDisplay.Container                                    1744                            72                             4
+nvxdsync                                               8620                           147                             8
+OfficeClickToRun                                       1600                           206                            37
+pcee4                                                  6624                           626                            33
+powershell                                             6260                           617                            66
+PresentationFontCache                                  3256                           513                            24
+RAVBg64                                                4428                           105                             5
+RAVCpl64                                               5564                           119                             4
+Razer Central                                           128                           554                            77
+Razer Synapse 3                                        8512                           703                            92
+Razer Synapse Service                                  2816                           495                           106
+Razer Synapse Service Process                         10152                           309                            34
+RazerCentralService                                    2028                           318                            64
+RIconMan                                               1704                            68                             2
+rundll32                                               5176                           104                             3
+RuntimeBroker                                          4884                            74                             1
+RzSDKServer                                            1804                            35                             2
+RzSDKService                                           1864                            50                             4
+SearchFilterHost                                       6576                            36                             2
+SearchIndexer                                          4992                           568                            68
+SearchProtocolHost                                     8236                            69                             2
+services                                                712                            26                             5
+SettingSyncHost                                       10356                           446                             8
+SkyDrive                                               9644                           149                             8
+Skype                                                  3876                           260                             8
+Skype                                                  5388                           290                            11
+Skype                                                  6776                           624                           128
+Skype                                                  7100                           405                            37
+Skype                                                  8616                           283                             8
+Skype                                                  9932                           418                            34
+smss                                                    336                             4                             0
+spoolsv                                                1328                            48                             4
+SSScheduler                                            8852                            70                             1
+svchost                                                 104                           143                            17
+svchost                                                 752                           196                            95
+svchost                                                 792                            48                             7
+svchost                                                 824                            40                             7
+svchost                                                 920                           133                            30
+svchost                                                 964                           462                            63
+svchost                                                1140                          1200                            12
+svchost                                                1364                           162                            19
+svchost                                                1656                            63                             3
+svchost                                                1664                           111                             7
+svchost                                                3088                            96                             8
+svchost                                                3564                           633                             7
+System                                                    4                             4                             1
+TabTip                                                 8240                            96                             2
+TabTip32                                               5080                            71                             1
+taskeng                                               10612                            29                             1
+taskhost                                               4108                          1301                            26
+taskhost                                               5352                            75                             3
+taskhostex                                             7232                           289                             4
+UnrealCEFSubProcess                                    6592                           439                            62
+wininit                                                 600                            41                             1
+winlogon                                               1680                            53                             1
+WmiApSrv                                               8812                            28                             1
+WmiPrvSE                                               2432                            62                            15
+WmiPrvSE                                               7896                           104                            22
+wmpnetwk                                               7292                           106                             7
+WUDFHost                                               4252                            86                             5
+
+
+3)
+
+
+PS C:\Users\santiago> Get-EventLog -List | fl -Property @{n='nombreLog'; e={$_.Log}}, @{n='Per-Retencion';e={$_.minimumRetentionDays}}
+
+
+nombreLog     : Application
+Per-Retencion : 0
+
+nombreLog     : HardwareEvents
+Per-Retencion : 0
+
+nombreLog     : Internet Explorer
+Per-Retencion : 7
+
+nombreLog     : Key Management Service
+Per-Retencion : 0
+
+nombreLog     : OAlerts
+Per-Retencion : 0
+
+nombreLog     : Security
+Per-Retencion :
+
+nombreLog     : System
+Per-Retencion : 0
+
+nombreLog     : Windows PowerShell
+Per-Retencion : 0
+
+4)
+
+
+PS C:\Users\santiago> Get-Service |Sort-Object status | fl -GroupBy status
+
+
+   Status: Stopped
+
+
+Name                : RpcLocator
+DisplayName         : Ubicador de llamada a procedimiento remoto (RPC)
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : SCardSvr
+DisplayName         : Tarjeta inteligente
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {wudfsvc}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : ScDeviceEnum
+DisplayName         : Servicio de enumeración de dispositivos de tarjeta inteligente
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : RemoteRegistry
+DisplayName         : Registro remoto
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : RasAuto
+DisplayName         : Administrador de conexiones automáticas de acceso remoto
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RasAcd}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+
+
+
+   Status: Running
+
+
+Name                : btwdins
+DisplayName         : Bluetooth Service
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : MMCSS
+DisplayName         : Programador de aplicaciones multimedia
+Status              : Running
+DependentServices   : {Audiosrv}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32ShareProcess
+
+Name                : CertPropSvc
+DisplayName         : Propagación de certificados
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32ShareProcess
+
+Name                : MpsSvc
+DisplayName         : Firewall de Windows
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {mpsdrv, bfe}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32ShareProcess
+
+Name                : ClickToRunSvc
+DisplayName         : Servicio Hacer clic y ejecutar de Microsoft Office
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : Browser
+DisplayName         : Examinador de equipos
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {LanmanServer, LanmanWorkstation}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32ShareProcess
+
+Name                : BrokerInfrastructure
+DisplayName         : Servicio de infraestructura de tareas en segundo plano
+Status              : Running
+DependentServices   :
+ServicesDependedOn  : {DcomLaunch, RpcSs, RpcEptMapper}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+5)
+
+
+PS C:\Users\santiago> ls -Path C:\ -Attributes directory| fw -Column 4
+
+
+    Directorio: C:\
+
+
+
+[boot]                        [Intel]                       [PerfLogs]                    [Program Files]
+[Program Files (x86)]         [temp]                        [Users]                       [Windows]
+
+
+6)
+
+PS C:\Users\santiago> ls -Path C:\Windows |where -filter {$_.Name -like "*.exe"} | fl -Property name, @{n='tamaño';e={$_.length}}, versionInfo
+
+
+Name        : bfsvc.exe
+tamaño      : 56832
+VersionInfo : File:             C:\Windows\bfsvc.exe
+              InternalName:     bfsvc.exe
+              OriginalFilename: bfsvc.exe.mui
+              FileVersion:      6.3.9600.16384 (winblue_rtm.130821-1623)
+              FileDescription:  Utilidad de servicio de actualización del archivo de arranque
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   6.3.9600.16384
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+
+Name        : explorer.exe
+tamaño      : 2755504
+VersionInfo : File:             C:\Windows\explorer.exe
+              InternalName:     explorer
+              OriginalFilename: EXPLORER.EXE.MUI
+              FileVersion:      6.3.9600.17031 (winblue_gdr.140221-1952)
+              FileDescription:  Explorador de Windows
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   6.3.9600.17031
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+
+Name        : HelpPane.exe
+tamaño      : 1001984
+VersionInfo : File:             C:\Windows\HelpPane.exe
+              InternalName:     HelpPane.exe
+              OriginalFilename: HelpPane.exe.mui
+              FileVersion:      6.3.9600.16384 (winblue_rtm.130821-1623)
+              FileDescription:  Ayuda y soporte técnico de Microsoft
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   6.3.9600.16384
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+
+Name        : hh.exe
+tamaño      : 17408
+VersionInfo : File:             C:\Windows\hh.exe
+              InternalName:     HH 1.41
+              OriginalFilename: HH.exe.mui
+              FileVersion:      6.3.9600.16384 (winblue_rtm.130821-1623)
+              FileDescription:  Archivo ejecutable de ayuda HTML de Microsoft®
+              Product:          Ayuda de HTML
+              ProductVersion:   6.3.9600.16384
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+
+Name        : notepad.exe
+tamaño      : 221184
+VersionInfo : File:             C:\Windows\notepad.exe
+              InternalName:     Notepad
+              OriginalFilename: NOTEPAD.EXE.MUI
+              FileVersion:      6.3.9600.16384 (winblue_rtm.130821-1623)
+              FileDescription:  Bloc de notas
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   6.3.9600.16384
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+
+Name        : regedit.exe
+tamaño      : 154624
+VersionInfo : File:             C:\Windows\regedit.exe
+              InternalName:     REGEDIT
+              OriginalFilename: REGEDIT.EXE.MUI
+              FileVersion:      6.3.9600.16384 (winblue_rtm.130821-1623)
+              FileDescription:  Editor del Registro
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   6.3.9600.16384
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+
+Name        : splwow64.exe
+tamaño      : 129024
+VersionInfo : File:             C:\Windows\splwow64.exe
+              InternalName:     splwow64.exe
+              OriginalFilename: splwow64.exe
+              FileVersion:      6.3.9600.19538 (winblue_ltsb_escrow.191014-1700)
+              FileDescription:  Print driver host for applications
+              Product:          Microsoft® Windows® Operating System
+              ProductVersion:   6.3.9600.19538
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Inglés (Estados Unidos)
+
+
+Name        : winhlp32.exe
+tamaño      : 9728
+VersionInfo : File:             C:\Windows\winhlp32.exe
+              InternalName:     WINHSTB
+              OriginalFilename: WINHLP32.EXE.MUI
+              FileVersion:      6.3.9600.16384 (winblue_rtm.130821-1623)
+              FileDescription:  Código auxiliar de Windows Winhlp32
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   6.3.9600.16384
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+
+Name        : write.exe
+tamaño      : 11264
+VersionInfo : File:             C:\Windows\write.exe
+              InternalName:     write
+              OriginalFilename: write
+              FileVersion:      6.3.9600.17415 (winblue_r4.141028-1500)
+              FileDescription:  Windows Write
+              Product:          Microsoft® Windows® Operating System
+              ProductVersion:   6.3.9600.17415
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Inglés (Estados Unidos)
+
+
+
+7)
+
+
+PS C:\Users\santiago> Get-NetAdapter | Where -filter {$_.Virtual -eq $false} |fl
+
+
+Name                       : Wi-Fi
+InterfaceDescription       : Realtek RTL8188CUS Wireless LAN 802.11n USB Slim Solo
+InterfaceIndex             : 5
+MacAddress                 : 00-1C-7B-D8-8F-E9
+MediaType                  : 802.3
+PhysicalMediaType          : Native 802.11
+InterfaceOperationalStatus : Up
+AdminStatus                : Up
+LinkSpeed(Mbps)            : 58
+MediaConnectionState       : Connected
+ConnectorPresent           : True
+DriverInformation          : Driver Date 2012-09-12 Version 1021.3.912.2012 NDIS 6.30
+
+Name                       : Ethernet
+InterfaceDescription       : Controladora Realtek PCIe GBE Family
+InterfaceIndex             : 3
+MacAddress                 : 08-9E-01-92-BA-93
+MediaType                  : 802.3
+PhysicalMediaType          : 802.3
+InterfaceOperationalStatus : Down
+AdminStatus                : Up
+LinkSpeed(Mbps)            : 0
+MediaConnectionState       : Disconnected
+ConnectorPresent           : True
+DriverInformation          : Driver Date 2013-05-10 Version 8.1.510.2013 NDIS 6.30
+
+Name                       : Ethernet 2
+InterfaceDescription       : TAP-Windows Adapter V9
+InterfaceIndex             : 18
+MacAddress                 : 00-FF-5E-64-80-8D
+MediaType                  : 802.3
+PhysicalMediaType          : 802.3
+InterfaceOperationalStatus : Down
+AdminStatus                : Up
+LinkSpeed(Mbps)            : 100
+MediaConnectionState       : Disconnected
+ConnectorPresent           : False
+DriverInformation          : Driver Date 2016-04-21 Version 9.0.0.21 NDIS 6.1
+
+
+8)
+
+
+PS C:\Users\santiago> Get-DnsClientCache | where -filter {$_.Type -eq (28 ) -or $_.Type -eq 1} |fl
+
+
+Entry      : sqm.telemetry.microsoft.com
+RecordName : sqm.telemetry.microsoft.com.nsatc.net
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 132
+DataLength : 4
+Data       : 65.55.252.93
+
+Entry      : www.icesi.edu.co
+RecordName : webcache.icesi.edu.co
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 7559
+DataLength : 4
+Data       : 200.3.192.46
+
+Entry      : mssplus.mcafee.com
+RecordName :
+RecordType : AAAA
+Status     : NoRecords
+Section    :
+TimeToLive :
+DataLength :
+Data       :
+
+Entry      : mssplus.mcafee.com
+RecordName : mssplus.mcafee.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 86400
+DataLength : 4
+Data       : 0.0.0.1
+
+Entry      : ocsp.digicert.com
+RecordName : cs9.wac.phicdn.net
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 469
+DataLength : 4
+Data       : 72.21.91.29
+
+Entry      : tr.teams.microsoft.com
+RecordName : eu.tr.teams.microsoft.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 80
+DataLength : 4
+Data       : 13.107.65.5
+
+Entry      : github.githubassets.com
+RecordName : github.githubassets.com
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 2569
+DataLength : 4
+Data       : 185.199.111.154
+
+
+
+9)
+
+
+PS C:\Users\santiago> ls -Path C:\Windows\System32 | where -filter {$_.Name -like "*exe"} | WHERE -filter {$_.length/1MB -gt 5} |fl
+
+
+    Directorio: C:\Windows\System32
+
+
+
+Name           : MRT-KB890830.exe
+Length         : 133315992
+CreationTime   : 02/05/2018 8:32:29 p. m.
+LastWriteTime  : 10/07/2018 12:51:43 p. m.
+LastAccessTime : 02/05/2018 8:32:29 p. m.
+VersionInfo    : File:             C:\Windows\System32\MRT-KB890830.exe
+                 InternalName:     mrt.exe
+                 OriginalFilename: mrt.exe
+                 FileVersion:      5.61.14929.3
+                 FileDescription:  Herramienta de eliminación de software malintencionado de Microsoft Windows
+                 Product:          Herramienta de eliminación de software malintencionado de Microsoft Windows
+                 ProductVersion:   5.61.14929.3
+                 Debug:            False
+                 Patched:          False
+                 PreRelease:       False
+                 PrivateBuild:     False
+                 SpecialBuild:     False
+                 Language:         Español (España, internacional)
+
+
+Name           : MRT.exe
+Length         : 121542864
+CreationTime   : 02/05/2018 8:32:22 p. m.
+LastWriteTime  : 19/03/2020 12:07:58 p. m.
+LastAccessTime : 02/05/2018 8:32:22 p. m.
+VersionInfo    : File:             C:\Windows\System32\MRT.exe
+                 InternalName:     mrt.exe
+                 OriginalFilename: mrt.exe
+                 FileVersion:      5.81.16832.1
+                 FileDescription:  Herramienta de eliminación de software malintencionado de Microsoft Windows
+                 Product:          Herramienta de eliminación de software malintencionado de Microsoft Windows
+                 ProductVersion:   5.81.16832.1
+                 Debug:            False
+                 Patched:          False
+                 PreRelease:       False
+                 PrivateBuild:     False
+                 SpecialBuild:     False
+                 Language:         Español (España, internacional)
+
+
+Name           : mspaint.exe
+Length         : 6692352
+CreationTime   : 21/11/2014 8:19:52 p. m.
+LastWriteTime  : 21/11/2014 8:19:52 p. m.
+LastAccessTime : 21/11/2014 8:19:52 p. m.
+VersionInfo    : File:             C:\Windows\System32\mspaint.exe
+                 InternalName:     MSPAINT
+                 OriginalFilename: MSPAINT.EXE.MUI
+                 FileVersion:      6.3.9600.16384 (winblue_rtm.130821-1623)
+                 FileDescription:  Paint
+                 Product:          Sistema operativo Microsoft® Windows®
+                 ProductVersion:   6.3.9600.16384
+                 Debug:            False
+                 Patched:          False
+                 PreRelease:       False
+                 PrivateBuild:     False
+                 SpecialBuild:     False
+                 Language:         Español (España, internacional)
+
+
+Name           : ntoskrnl.exe
+Length         : 7362288
+CreationTime   : 11/03/2020 8:18:32 p. m.
+LastWriteTime  : 03/03/2020 7:40:10 p. m.
+LastAccessTime : 11/03/2020 8:18:32 p. m.
+VersionInfo    : File:             C:\Windows\System32\ntoskrnl.exe
+                 InternalName:     ntkrnlmp.exe
+                 OriginalFilename: ntkrnlmp.exe
+                 FileVersion:      6.3.9600.19665 (winblue_ltsb.200225-0600)
+                 FileDescription:  NT Kernel & System
+                 Product:          Microsoft® Windows® Operating System
+                 ProductVersion:   6.3.9600.19665
+                 Debug:            False
+                 Patched:          False
+                 PreRelease:       False
+                 PrivateBuild:     False
+                 SpecialBuild:     False
+                 Language:         Inglés (Estados Unidos)
+
+
+Name           : sppsvc.exe
+Length         : 6522344
+CreationTime   : 14/09/2018 11:21:35 a. m.
+LastWriteTime  : 24/07/2018 12:50:08 p. m.
+LastAccessTime : 14/09/2018 11:21:35 a. m.
+VersionInfo    : File:             C:\Windows\System32\sppsvc.exe
+                 InternalName:     sppsvc
+                 OriginalFilename: sppsvc.exe.mui
+                 FileVersion:      6.3.9600.16384 (winblue_rtm.130821-1623)
+                 FileDescription:  Servicio de plataforma de protección de software de Microsoft
+                 Product:          Sistema operativo Microsoft® Windows®
+                 ProductVersion:   6.3.9600.16384
+                 Debug:            False
+                 Patched:          False
+                 PreRelease:       False
+                 PrivateBuild:     False
+                 SpecialBuild:     False
+                 Language:         Español (España, internacional)
+
+
+
+
+10)
+
+
+PS C:\Users\santiago> Get-HotFix | where -filter {$_.description -like "*security*"} |fl
+
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB2894852
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         :
+Name                :
+ServicePackInEffect :
+Status              :
+
+
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB2972213
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         :
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB2973114
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         :
+Name                :
+ServicePackInEffect :
+Status              :
+
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB3035126
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 05/03/2018 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB3037576
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         :
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB3045685
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 05/03/2018 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB3045755
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 05/03/2018 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB3045999
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 05/03/2018 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB3046017
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 05/03/2018 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+
+...
+
+11)
+
+
+PS C:\Users\santiago> Get-HotFix | where -filter {$_.installedBy -like "*SYSTEM*"} |fl
+
+
+Description         : Update
+FixComments         :
+HotFixID            : KB2899189_Microsoft-Windows-CameraCodec-Package
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 05/03/2018 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB2894852
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         :
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB2966828
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         :
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB3139398
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 05/03/2018 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB3139914
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 05/03/2018 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Update
+FixComments         :
+HotFixID            : KB3140234
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         :
+Name                :
+ServicePackInEffect :
+Status              :
+
+...
+
+
+
+12)
+
+
+PS C:\Users\santiago> Get-Process | where -filter {$_.Name -eq "Conhost" -or $_.Name -eq "Svchost"} | fl
+
+
+Id      : 5640
+Handles : 97
+CPU     : 7,5625
+Name    : conhost
+
+Id      : 104
+Handles : 1042
+CPU     :
+Name    : svchost
+
+Id      : 752
+Handles : 937
+CPU     :
+Name    : svchost
+
+Id      : 792
+Handles : 505
+CPU     :
+Name    : svchost
+
+Id      : 824
+Handles : 588
+CPU     :
+Name    : svchost
+
+Id      : 920
+Handles : 877
+CPU     :
+Name    : svchost
+
+Id      : 964
+Handles : 2205
+CPU     :
+Name    : svchost
+
+Id      : 1140
+Handles : 902
+CPU     :
+Name    : svchost
+
+Id      : 1364
+Handles : 564
+CPU     :
+Name    : svchost
+
+Id      : 1656
+Handles : 177
+CPU     :
+Name    : svchost
+
+Id      : 1664
+Handles : 409
+CPU     :
+Name    : svchost
+
+Id      : 3088
+Handles : 548
+CPU     :
+Name    : svchost
+
+Id      : 3564
+Handles : 404
+CPU     :
+Name    : svchost
+
+
+
+
+PS C:\Users\santiago> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200324234933
+**********************

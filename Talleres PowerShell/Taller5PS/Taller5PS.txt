@@ -1,0 +1,315 @@
+**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200325013518
+Nombre de usuario: PC-SANTIAGO\santiago
+Usuario RunAs: PC-SANTIAGO\santiago
+Máquina: PC-SANTIAGO (Microsoft Windows NT 6.3.9600.0)
+Aplicación host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Id. de proceso: 6260
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\santiago\Documents\PowerShell_transcript.PC-SANTIAGO.iG
+wtTDim.20200325013518.txt
+
+
+1)  
+con la clase 
+win32_NetworkAdapterconfiguration
+meidante 
+Get-CimInstance win32_networkadapterconfiguration | Select-Object IP
+se puede liberar un préstamo de dirección (lease) DHCP
+
+2)
+
+PS C:\Users\santiago> Get-WmiObject win32_quickfixengineering
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+PC-SANTIAGO   Update           KB2899189_... NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB2959936     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2894852     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB2894856     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB2919355     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2920189     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2931358     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2931366     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2937220     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2938772     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2939153     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Hotfix           KB2949621     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2954879     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2958262     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2958263     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2961072     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2962140     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2965142     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2965500     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2966826     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB2966828     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB2967917     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2968296     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB2968599     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2971203     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2972103     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB2972213     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB2973114     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB2975061     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2976627     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2976978     NT AUTHORITY\SYSTEM  07/12/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB2977629     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2978002     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2978122     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB2981580     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB2987107     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB2989647     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB2989930     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB2990967     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB2994290     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB2998527     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB3000850     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB3001237     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Security Update  KB3003057     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB3003667     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3008242     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3012235     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3012702     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3013172     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3013531     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3013538     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3013791     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3014442     PC-SANTIAGO\Admin...
+PC-SANTIAGO   Update           KB3015696     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3018133     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3019978     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3020370     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3023219     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3024751     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3024755     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3029606     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3030947     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3031044     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3033446     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3035126     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3036612     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3037576     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3038002     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3042085     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3043812     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3044374     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3044673     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3045634     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3045685     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3045717     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3045719     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3045755     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3045999     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3046017     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3046480     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Hotfix           KB3046737     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3047254     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3053863     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3054169     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3054256     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3054464     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3055323     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3055343     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3055642     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3056347     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3059317     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3060793     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3061493     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3061512     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3062760     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3063843     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3064059     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3071756     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3072307     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3074545     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3076949     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3077715     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3078405     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3078676     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3080149     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3080800     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3082089     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3084135     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3086255     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3087137     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3091297     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3095701     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3097992     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3099834     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3100473     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3103616     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3103696     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3103709     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3109103     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3109560     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3109976     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3110329     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3115224     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3121261     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3122651     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3126030     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3126434     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3126587     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Security Update  KB3127222     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3133690     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Update           KB3134815     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3137728     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3138378     NT AUTHORITY\SYSTEM
+PC-SANTIAGO   Update           KB3138602     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3138910     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3138962     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+PC-SANTIAGO   Security Update  KB3139398     NT AUTHORITY\SYSTEM  05/03/2018 12:00:00 a. m.
+
+...
+
+3)
+
+
+PS C:\Users\santiago> Get-WmiObject win32_service | Select-Object status, startmode, systemname
+
+status                                  startmode                               systemname
+------                                  ---------                               ----------
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+UNKNOWN                                 Unknown                                 PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Disabled                                PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+OK                                      Auto                                    PC-SANTIAGO
+OK                                      Manual                                  PC-SANTIAGO
+...
+
+4)
+
+
+PS C:\Users\santiago> Get-CimClass -Namespace root/SecurityCenter2 | where -Filter {$_.CimClassName -like "*product*"}
+
+
+   NameSpace: ROOT/securitycenter2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+AntiSpywareProduct                  {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToS...
+AntiVirusProduct                    {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToS...
+FirewallProduct                     {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToS...
+
+
+5)
+
+
+PS C:\Users\santiago> Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiSpywareProduct | Select-Object displayName
+
+displayName
+-----------
+Windows Defender
+
+
+6)
+
+
+PS C:\Users\santiago> Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct | Select-Object displayName
+
+displayName
+-----------
+Windows Defender
+
+
+
+PS C:\Users\santiago> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200325023800
+**********************
